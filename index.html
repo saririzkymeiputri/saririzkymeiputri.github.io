@@ -1,54 +1,90 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="id">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Portfolio</title>
+    <title>Portofolio - Sari Rizky Mei Putri</title>
     <link rel="stylesheet" href="style.css">
+    <script defer src="script.js"></script>
 </head>
 <body>
+
+    <!-- Navbar -->
     <header>
-        <div class="logo">
-            <h1>Sari</h1>
-        </div>
+        <div class="logo">Sari Rizky Mei Putri</div>
         <nav>
-            <ul>
-                <li><a href="">Home</a></li>
-                <li><a href="">About</a></li>
-                <li><a href="">Categories</a></li>
-                <li><a href="">Contact</a></li>
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#contact">Contact</a></li>
             </ul>
         </nav>
-        <div class="account">
-            <!-- <button>Dashboard</button> -->
-        </div>
-        <div class="icons">
-            <img src="./Group 1.png" alt="">
-        </div>
     </header>
 
-    <hr />
+    <!-- Hero Section -->
+    <section id="home">
+        <div class="hero-content">
+            <h1>Hi, I'm <span>Sari Rizky Mei Putri</span></h1>
+            <p>Web Developer & UI/UX Designer</p>
+            <a href="#contact" class="btn">Hire Me</a>
+        </div>
+    </section>
 
-    <p><b>Hello,</b> my name is</p>
-    <p><strong>Sari Rizky Mei Putri</strong></p>
-    <img src="sari image porto.jpg" width="200px">
+    <!-- About Section -->
+    <section id="about">
+        <h2>About Me</h2>
+        <div class="about-content">
+            <img src="profile.jpg" alt="Foto Profil">
+        <p>Nama saya Sari, seorang mahasiswa di Universitas Riau, yang sedang belajar dan mengembangkan keterampilan di bidang teknologi. Saya memiliki minat dalam desain UI/UX, website dan AI. Selain itu, saya juga sedang mempelajari beberapa bahasa pemrograman untuk mendukung progres pengembangan web saya.
 
-    <br>
-    <marquee style="color:palevioletred;">
-        <font size="20">Web Developer</font>
-    </marquee>
+            Selain keterampilan teknis, saya juga tertarik dengan public speaking, khususnya dalam hal presentasi. Selama ini, saya sudah beberapa kali melakukan presentasi di lingkungan akademik, dan saya ingin terus meningkatkan kemampuan saya dalam berbicara di depan umum. Saya berharap bisa mendapatkan lebih banyak pengalaman dengan berbicara di seminar atau komunitas teknologi, terutama dalam topik UI/UX dan web development.
+            
+            Saat ini, saya masih dalam tahap belajar dan ingin terus berkembang. Saya ingin bertemu dengan orang-orang yang memiliki minat serupa, belajar dari mereka, serta berbagi wawasan yang saya miliki. Saya percaya bahwa dengan terus berlatih dan mencoba hal baru, agar saya bisa menjadi lebih baik di bidang yang saya tekuni.</p>
+    </section>
 
-    <i><p>I am from Pekanbaru, Indonesia. I am in</p>
-    <p>University Riau of Informatic Engineering and I like</p>
-    <p>to make web and AI. I like to learn new things.</p></i>
+    <!-- Projects Section -->
+    <section id="projects">
+        <h2>Projects</h2>
+        <div class="project-list">
+            <div class="project">
+                <h3>Project 1</h3>
+                <p>Deskripsi singkat tentang project.</p>
+            </div>
+            <div class="project">
+                <h3>Project 2</h3>
+                <p>Deskripsi singkat tentang project.</p>
+            </div>
+        </div>
+    </section>
 
-    <br>
+    <!-- Skills Section -->
+    <section id="skills">
+        <h2>Skills</h2>
+        <div class="skill-list">
+            <div class="skill">HTML</div>
+            <div class="skill">CSS</div>
+            <div class="skill">JavaScript</div>
+            <div class="skill">Writing</div>
+            <div class="skill">Communication</div>
+        </div>
+    </section>
 
-    <a href="https://www.instagram.com/saririz_?igsh=MXFnM3Y0dHQ4dTdyaQ==">Instagram</a> <br>
+    <!-- Contact Section -->
+    <section id="contact">
+        <h2>Contact Me</h2>
+        <form>
+            <input type="text" placeholder="Nama" required>
+            <input type="email" placeholder="Email" required>
+            <textarea placeholder="Pesan" required></textarea>
+            <button type="submit">Kirim</button>
+        </form>
+    </section>
 
-    <a href="https://www.instagram.com/saririz_?igsh=MXFnM3Y0dHQ4dTdyaQ==">
-        <button>Click Me</button>
-    </a>
+    <footer>
+        <p>&copy; 2025 Sari Rizky Mei Putri</p>
+    </footer>
 
 </body>
 </html>
