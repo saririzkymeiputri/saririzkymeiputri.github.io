@@ -1,3 +1,291 @@
-Body {
-   background-color: plum;
+* {
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+   font-family: 'Poppins', sans-serif;
+   scroll-behavior: smooth;
+ }
+ 
+ body {
+   background: linear-gradient(to right, #D8BFD8, #E6E6FA);
+   color: #333;
+ }
+ .about-content img {
+   width: 150px;
+   height: 150px;
+   border-radius: 50%;
+   object-fit: cover;
+   border: 4px solid #6a0dad;
+   max-width: 100%;
+ }
+ .profile-container {
+  position: relative;
+  display: inline-block;
+  overflow: hidden;
 }
+
+.about-content img {
+  border-radius: 15px;
+  border: none;
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.about-content img:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 20px 35px rgba(0, 0, 0, 0.2);
+}
+
+.profile-container:hover .profile-img {
+  transform: scale(1.05); /* Zoom in saat hover */
+}
+
+.overlay {
+  position: absolute;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.6); /* hitam transparan */
+  color: #fff;
+  width: 100%;
+  text-align: center;
+  padding: 10px 0;
+  opacity: 0;
+  transition: opacity 0.4s ease;
+}
+
+.profile-container:hover .overlay {
+  opacity: 1;
+}
+
+.nama {
+  font-size: 1rem;
+  font-weight: bold;
+  font-family: 'Poppins', sans-serif;
+}
+
+
+ .about-content p {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.about-content:hover p {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+ 
+ header {
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   padding: 15px 5%;
+   background: rgba(51, 51, 51, 0.9);
+   color: white;
+   position: fixed;
+   width: 100%;
+   top: 0;
+   z-index: 1000;
+ }
+ 
+ .logo {
+   font-size: 24px;
+   font-weight: bold;
+ }
+ 
+ nav ul {
+   list-style: none;
+   display: flex;
+ }
+ 
+ nav ul li {
+   margin: 0 15px;
+ }
+ 
+ nav ul li a {
+   color: white;
+   text-decoration: none;
+   font-weight: bold;
+ }
+ 
+ section {
+   padding: 80px 10%;
+   text-align: center;
+   min-height: 100vh;
+ }
+ 
+ #home {
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   text-align: center;
+ }
+ 
+ .hero-content h1 {
+   font-size: 2.5em;
+ }
+ 
+ .hero-content span {
+   color: #6a0dad;
+ }
+ 
+ .btn {
+   display: inline-block;
+   margin-top: 10px;
+   padding: 10px 20px;
+   background: #6a0dad;
+   color: white;
+   text-decoration: none;
+   border-radius: 5px;
+ }
+ 
+ /* Audio Controls */
+ .audio-controls {
+   display: flex;
+   justify-content: center;
+   gap: 10px;
+   margin: 20px 0 40px;
+ }
+ 
+ .audio-controls button {
+   padding: 10px 15px;
+   font-size: 16px;
+   cursor: pointer
+ } 
+
+ /* Typing effect */
+#typed-text {
+   font-size: 2em;
+   font-weight: bold;
+   color: #333;
+   white-space: pre-line; /* agar \n bekerja */
+ }
+ 
+ 
+ @keyframes blink {
+   0%, 100% {
+     opacity: 1;
+   }
+   50% {
+     opacity: 0;
+   }
+ }
+ 
+ 
+ .cursor {
+   display: inline-block;
+   width: 1px;
+   background-color: #333;
+   animation: blink 0.7s infinite;
+   margin-left: 5px;
+ }
+ 
+ @keyframes blink {
+   0%, 100% {
+     opacity: 1;
+   }
+   50% {
+     opacity: 0;
+   }
+ }
+ #typed-text {
+   font-size: 1.8em; /* Ubah dari 2em ke 1.8em atau sesuai selera */
+   font-weight: bold;
+   color: #333;
+   white-space: pre-line;
+   line-height: 1.4;
+   text-align: center;
+ }
+ 
+ .cursor {
+   font-size: 1.8em; /* Sesuaikan dengan typed-text */
+ }
+ /* Navbar bergaya seperti halaman Experience */
+header {
+  background-color: #111;
+  padding: 20px;
+  text-align: center;
+}
+
+header .logo {
+  font-size: 24px;
+  font-weight: bold;
+  color: #00ff99;
+}
+
+.nav-links {
+  list-style: none;
+  padding: 0;
+  margin-top: 10px;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.nav-links li a {
+  color: #ccc;
+  text-decoration: none;
+  position: relative;
+  transition: color 0.3s ease;
+}
+
+.nav-links li a:hover {
+  color: #00ffcc;
+}
+
+/* Efek underline animasi saat hover */
+.nav-links li a::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: -4px;
+  left: 0;
+  background-color: #00ffcc;
+  transition: width 0.3s ease;
+}
+
+.nav-links li a:hover::after {
+  width: 100%;
+}
+
+/* Background untuk bagian home */
+#home {
+  background: linear-gradient(to right, #0f0c29, #302b63, #24243e);
+  padding: 100px 20px;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+ @media (max-width: 600px) {
+   #typed-text, .cursor {
+     font-size: 1.2em;
+   }
+ }
+ .leaf {
+   position: fixed;
+   top: -50px;
+   background-image: url('leaf.png'); /* kamu bisa ganti dengan icon daun sendiri */
+   background-size: cover;
+   background-repeat: no-repeat;
+   opacity: 0.7;
+   z-index: 0;
+   pointer-events: none;
+   animation-name: fall;
+   animation-timing-function: linear;
+ }
+ 
+ @keyframes fall {
+   0% {
+     transform: translateY(0) rotate(0deg);
+     opacity: 1;
+   }
+   100% {
+     transform: translateY(100vh) rotate(360deg);
+     opacity: 0;
+   }
+ }
+ 
+ 

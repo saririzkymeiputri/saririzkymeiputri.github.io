@@ -1,54 +1,182 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="id">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Portfolio</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Portofolio - Sari Rizky Mei Putri</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+  <script defer src="script.js"></script> <!-- Penting untuk animasi -->
 </head>
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const navLinks = document.querySelectorAll(".nav-links a");
+    navLinks.forEach(link => {
+      if (link.textContent.trim().toLowerCase() === "projects") {
+        link.setAttribute("href", "projects.html");
+      }
+    });
+  });
+</script>
+
 <body>
-    <header>
-        <div class="logo">
-            <h1>Sari</h1>
+
+ <!-- Navbar -->
+<header>
+  <div class="logo">Sari Rizky Mei Putri</div>
+  <nav>
+    <ul class="nav-links">
+      <li><a href="#home">Home</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="projects.html">Projects</a></li> <!-- Sudah diperbaiki lewat JS -->
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="experience.html">Experience</a></li> <!-- ✅ Ini yang harus ditambah -->
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </nav>
+  
+</header>
+
+
+  <!-- Hero Section -->
+  <!-- Hero Section -->
+<section id="home">
+  <div class="hero-content">
+    <h1><span id="typed-text"></span><span class="cursor">|</span></h1>
+    <a href="contact.html" class="btn">Contact Me</a>
+  </div>
+</section>
+
+  <!-- Audio Controls -->
+  <div class="audio-controls">
+    <button onclick="togglePlay()">▶️ Play / ⏸️ Pause</button>
+  </div>
+
+  <!-- About -->
+  <section id="about">
+    <h2>About Me</h2>
+    <div class="about-content">
+      
+      <div class="profile-container">
+        <img src="profile.jpg" alt="Foto Profil" class="profile-img" />
+        <div class="overlay">
+          <span class="nama">Sari Rizky Mei Putri</span>
         </div>
-        <nav>
-            <ul>
-                <li><a href="">Home</a></li>
-                <li><a href="">About</a></li>
-                <li><a href="">Categories</a></li>
-                <li><a href="">Contact</a></li>
-            </ul>
-        </nav>
-        <div class="account">
-            <!-- <button>Dashboard</button> -->
-        </div>
-        <div class="icons">
-            <img src="./Group 1.png" alt="">
-        </div>
-    </header>
+      </div>
+      
+      <p>Nama saya Sari, seorang mahasiswa di Universitas Riau, yang sedang belajar dan mengembangkan keterampilan di bidang teknologi  Saya memiliki minat dalam desain UI/UX, website dan AI. Selain itu, saya juga sedang mempelajari beberapa bahasa pemrograman untuk mendukung progres pengembangan web saya.</p>
 
-    <hr />
+      <p> Selain keterampilan teknis, saya juga tertarik dengan public speaking, khususnya dalam hal presentasi. Selama ini, saya sudah beberapa kali melakukan presentasi di lingkungan akademik, dan saya ingin terus meningkatkan kemampuan saya dalam berbicara di depan umum. Saya berharap bisa mendapatkan lebih banyak pengalaman dengan berbicara di seminar atau komunitas teknologi, terutama dalam topik UI/UX dan web development.</p>
+        
+      <p>Saat ini, saya masih dalam tahap belajar dan ingin terus berkembang. Saya ingin bertemu dengan orang-orang yang memiliki minat serupa, belajar dari mereka, serta berbagi wawasan yang saya miliki. Saya percaya bahwa dengan terus berlatih dan mencoba hal baru, agar saya bisa menjadi lebih baik di bidang yang saya tekuni.</p>
+    </div>
+  </section>
 
-    <p><b>Hello,</b> my name is</p>
-    <p><strong>Sari Rizky Mei Putri</strong></p>
-    <img src="sari image porto.jpg" width="200px">
+  <!-- Projects -->
+  <section id="projects">
+    <h2>Projects</h2>
+    <div class="project-list">
+      <div class="project">
+        <h3>Project 1</h3>
+        <p>Deskripsi singkat tentang project.</p>
+      </div>
+      <div class="project">
+        <h3>Project 2</h3>
+        <p>Deskripsi singkat tentang project.</p>
+      </div>
+    </div>
+  </section>
 
-    <br>
-    <marquee style="color:palevioletred;">
-        <font size="20">Web Developer</font>
-    </marquee>
+  <!-- Skills -->
+  <section id="skills">
+    <h2>Skills</h2>
+    <div class="skill-list">
+      <div class="skill">HTML</div>
+      <div class="skill">CSS</div>
+      <div class="skill">JavaScript</div>
+      <div class="skill">Writing</div>
+      <div class="skill">Communication</div>
+    </div>
+  </section>
+    <!-- Contact -->
+ 
 
-    <p><i>I am from Pekanbaru, Indonesia. I am in</i></p>
-    <p><i>University Riau of Informatic Engineering and I like</i></p>
-    <p><i>to make web and AI. I like to learn new things.</i></p>
+  
 
-    <br>
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2025 Sari Rizky Mei Putri</p>
+  </footer>
 
-    <a href="https://www.instagram.com/saririz_?igsh=MXFnM3Y0dHQ4dTdyaQ==">Instagram</a> <br>
+  <!-- Background Audio -->
+  <audio id="background-audio" loop>
+    <source src="sound.mp3" type="audio/mp3" />
+    Browser Anda tidak mendukung elemen audio.
+  </audio>
+  <!-- Video Daun Jatuh -->
+<video id="leaf-video" autoplay muted loop playsinline style="display:none; position:fixed; top:0; left:0; width:100%; height:100%; object-fit:cover; z-index:-1;">
+    <source src="video daun.mp4" type="video/mp4" />
+    Browser Anda tidak mendukung video background.
+  </video>
+  
 
-    <a href="https://www.instagram.com/saririz_?igsh=MXFnM3Y0dHQ4dTdyaQ==">
-        <button>Click Me</button>
-    </a>
+  <script>
+    const audio = document.getElementById("background-audio");
+    const leafVideo = document.getElementById("leaf-video");
+  
+    function togglePlay() {
+      if (audio.paused) {
+        audio.play();
+        leafVideo.style.display = "block";
+      } else {
+        audio.pause();
+        leafVideo.style.display = "none";
+      }
+    }
+  
+    // Jika user pause dari browser, video tetap ikut mati
+    audio.addEventListener("pause", () => {
+      leafVideo.style.display = "none";
+    });
+  
+    audio.addEventListener("play", () => {
+      leafVideo.style.display = "block";
+    });
+  </script>
 
-</body>
-</html>
+<script>
+  // ... kode sebelumnya untuk audio dan video
+
+  // Animasi muncul saat scroll
+  const aboutParagraphs = document.querySelectorAll('.about-content p');
+
+  function revealOnScroll() {
+    const triggerBottom = window.innerHeight * 0.9;
+
+    aboutParagraphs.forEach(p => {
+      const pTop = p.getBoundingClientRect().top;
+
+      if (pTop < triggerBottom) {
+        p.classList.add('show');
+      } else {
+        p.classList.remove('show');
+      }
+    });
+  }
+
+  window.addEventListener('scroll', revealOnScroll);
+  window.addEventListener('load', revealOnScroll);
+</script>
+
+<li><a href="experience.html">Experience</a></li>
+
+<nav>
+  <ul>
+    <li><a href="index.html">Home</a></li>
+    <li><a href="about.html">About</a></li>
+    <li><a href="project.html">Project</a></li>
+    <li><a href="experience.html">Experience</a></li> <!-- Tambahkan ini -->
+    <li><a href="contact.html">Contact</a></li>
+  </ul>
+</nav>

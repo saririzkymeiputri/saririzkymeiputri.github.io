@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Kategori Format Media</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(to right, #0f0c29, #302b63, #24243e);
+      color: #fff;
+    }
+
+    .container {
+      padding: 60px 20px;
+      max-width: 1200px;
+      margin: auto;
+    }
+
+    h1 {
+      font-size: 36px;
+      text-align: center;
+      color: #e6ffe6;
+      text-shadow: 0 0 8px #00ffcc;
+    }
+
+    .section-title {
+      font-size: 24px;
+      margin: 40px 0 20px;
+      color: #00ff99;
+    }
+
+    .media-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+      gap: 20px;
+    }
+
+    .media-card {
+      background-color: rgba(255, 255, 255, 0.05);
+      border: 2px solid transparent;
+      border-radius: 12px;
+      padding: 20px 10px;
+      text-align: center;
+      transition: all 0.3s ease;
+      backdrop-filter: blur(8px);
+    }
+
+    .media-card:hover {
+      transform: translateY(-5px);
+      border-color: #00ffcc;
+      box-shadow: 0 0 15px #00ffcc;
+    }
+
+    .media-card i {
+      font-size: 36px;
+      color: #ff6666;
+      margin-bottom: 10px;
+    }
+
+    .media-name {
+      font-weight: bold;
+      color: #bfff00;
+      margin-bottom: 8px;
+    }
+
+    .media-link {
+      font-size: 14px;
+      color: #87cefa;
+      text-decoration: underline;
+    }
+
+    hr {
+      border: none;
+      height: 2px;
+      background: #333;
+      margin: 30px 0;
+    }
+
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <h1>Kategori Format Media:</h1>
+
+    <div class="section-title"><i class="fa-solid fa-film"></i> Format Video</div>
+    <div class="media-grid">
+      <div class="media-card">
+        <i class="fa-solid fa-file-video"></i>
+        <div class="media-name">MP4</div>
+        <div class="media-link">Preview [di sini]</div>
+      </div>
+      <div class="media-card">
+        <i class="fa-solid fa-file-video"></i>
+        <div class="media-name">WebM</div>
+        <div class="media-link">Preview [di sini]</div>
+      </div>
+      <div class="media-card">
+        <i class="fa-solid fa-file-video"></i>
+        <div class="media-name">AVI</div>
+        <div class="media-link">Preview [di sini]</div>
+      </div>
+      <div class="media-card">
+        <i class="fa-solid fa-file-video"></i>
+        <div class="media-name">FLV</div>
+        <div class="media-link">Preview [di sini]</div>
+      </div>
+      <div class="media-card">
+        <i class="fa-solid fa-file-video"></i>
+        <div class="media-name">MKV</div>
+        <div class="media-link">Preview [di sini]</div>
+      </div>
+      <div class="media-card">
+        <i class="fa-solid fa-file-video"></i>
+        <div class="media-name">MOV</div>
+        <div class="media-link">Preview [di sini]</div>
+      </div>
+      <div class="media-card">
+        <i class="fa-solid fa-file-video"></i>
+        <div class="media-name">MPEG</div>
+        <div class="media-link">Preview [di sini]</div>
+      </div>
+      <div class="media-card">
+        <i class="fa-solid fa-file-video"></i>
+        <div class="media-name">WMV</div>
+        <div class="media-link">Preview [di sini]</div>
+      </div>
+    </div>
+
+    <hr>
+
+    <div class="section-title"><i class="fa-solid fa-music"></i> Format Audio</div>
+    <div class="media-grid">
+      <div class="media-card">
+        <i class="fa-solid fa-file-audio"></i>
+        <div class="media-name">MP3</div>
+        <div class="media-link">Preview [di sini]</div>
+      </div>
+      <div class="media-card">
+        <i class="fa-solid fa-file-audio"></i>
+        <div class="media-name">WAV</div>
+        <div class="media-link">Preview [di sini]</div>
+      </div>
+      <div class="media-card">
+        <i class="fa-solid fa-file-audio"></i>
+        <div class="media-name">OGG</div>
+        <div class="media-link">Preview [di sini]</div>
+      </div>
+    </div>
+
+  </div>
+
+</body>
+</html>
