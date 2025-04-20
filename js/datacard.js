@@ -187,17 +187,17 @@ const AudioFormats = [
 const GambarFormats = [
     {
       "title": "PNG",
-      "url": "https://drive.google.com/file/d/1nfPAFk-ZguOcky8QF1S0bZHrN0I9iOXn/view?usp=sharing",
+      "url": "https://drive.google.com/file/d/1_uOaXe9NHcrx97WCwM9jJVXAv7SMwktc/view?usp=sharing",
       "description": "PNG adalah format gambar lossless yang mendukung transparansi dan sangat cocok digunakan dalam desain grafis serta web. Format ini mampu mempertahankan kualitas gambar meskipun disimpan berulang kali, dan tidak mengalami degradasi seperti JPEG. PNG sering digunakan untuk gambar dengan latar belakang transparan atau elemen grafis seperti ikon dan logo."
     },
     {
       "title": "GIF",
-      "url": "https://drive.google.com/file/d/1pOuoZrRyww01F1KoNRyH87eC9XhZtZ12/view?usp=sharing",
+      "url": "https://drive.google.com/file/d/1zduqCfHplF2nIPi8HmOclKO0YYaVAKrk/view?usp=sharing",
       "description": "GIF merupakan format gambar yang mendukung animasi dan transparansi, namun hanya terbatas pada 256 warna. Meskipun kualitas warnanya terbatas, GIF sangat populer untuk pembuatan animasi ringan atau meme di media sosial karena ukurannya kecil dan dapat berjalan otomatis."
     },
     {
       "title": "RAW",
-      "url": "https://drive.google.com/file/d/1WM24xwRqfcXgN8C8nyagTBeMkXkzSrtn/view?usp=sharing",
+      "url": "https://drive.google.com/file/d/14ZAXTKisD9rwroDwCFvzlhpAAWD3xjP6/view?usp=sharing",
       "description": "RAW adalah file dengan kualitas tertinggi yang tersedia untuk pengambilan gambar dan penyimpanan, karena mengandung detail paling banyak. Tidak ada kompresi atau konversi, yang dapat menurunkan kualitas gambar dan memengaruhi jenis file raster lainnya."
     },
     {
@@ -227,7 +227,7 @@ const GambarFormats = [
     },
     {
       "title": "HEIF",
-      "url": "https://drive.google.com/file/d/1XjI5EPBYCvAupbpI6X9viFlffDIkGuZC/view?usp=sharing",
+      "url": "https://drive.google.com/file/d/1QafOIfLeAb_2juit_mlUqaiTrXEV7LJQ/view?usp=sharing",
       "description": "HEIF (High Efficiency Image File Format) adalah format file gambar modern yang lebih efisien dibandingkan JPEG. Format ini menggunakan algoritma kompresi yang lebih canggih, memungkinkan ukuran file yang lebih kecil dengan kualitas gambar yang tetap terjaga. HEIF juga mendukung fitur-fitur tambahan seperti penyimpanan beberapa gambar dalam satu file, transparan, dan kedalaman warna 16-bit. "
     },
     {
@@ -235,11 +235,6 @@ const GambarFormats = [
       "url": "https://drive.google.com/file/d/1GUDnyJya2eC6Ij0ygAyklQ0oTKf5EV3Q/view?usp=sharing",
       "description": "WEBP adalah format gambar modern yang dikembangkan oleh Google, mendukung kompresi lossy dan lossless, serta transparansi dan animasi. Format ini menawarkan ukuran file yang lebih kecil dibandingkan JPEG dan PNG dengan kualitas visual yang tetap optimal."
     },
-    {
-      "title": "JFIF",
-      "url": "https://drive.google.com/file/d/1J63u2nsvY0ogoACYIIOVIJagifVFNHXI/view?usp=sharing",
-      "description": "JFIF adalah varian dari JPEG yang digunakan untuk mentransfer gambar antar perangkat dengan struktur file tertentu. Meskipun secara teknis hampir sama dengan JPEG, JFIF memiliki header khusus yang memudahkan pengenalan dan kompatibilitas antar sistem."
-    }
   ]
   
   const AnimasiFormats = [
@@ -250,47 +245,47 @@ const GambarFormats = [
     },
     {
       "title": "Anime",
-      "url": "https://youtu.be/X2IONMywHJU?si=UcpMPfBccMf8VLuI",
+      "url": "https://youtu.be/ftYlLDRjh38?si=u-3hYj-nmgVbIT6R",
       "description": "Anime adalah bentuk animasi yang berasal dari Jepang dan memiliki ciri khas pada gaya visual karakter serta narasi yang mendalam. Meskipun awalnya merupakan budaya Jepang, anime kini telah menjadi genre global dengan berbagai tema dan genre, dari aksi hingga drama, dan diproduksi dalam format serial televisi, film, maupun web."
     },
     {
       "title": "Animasi 2D",
-      "url": "https://drive.google.com/file/d/1EY6Yf1RKbnMm6y1DXCAWmt8TeSu7zL7Z/view?usp=sharing",
+      "url": "https://youtu.be/EkQV6Gutpx4?si=IFcqLHS5jdb2ScVY",
       "description": "Animasi 2D (Dua Dimensi), yang juga dikenal sebagai flat animation, merupakan bentuk animasi yang menampilkan objek dalam dua dimensi, yaitu panjang dan lebar tanpa kedalaman. Jenis animasi ini sangat populer dan menjadi dasar dari banyak film animasi klasik yang bersifat menghibur, lucu, dan ringan."
     },
     {
       "title": "Animasi 3D",
-      "url": "https://drive.google.com/file/d/1XzmbEmzfppBb6thC-7CoU0AiRHr1ajga/view?usp=sharing",
+      "url": "https://youtu.be/AoGPqVblSGo?si=PkzjTcHYVyDxXgpy",
       "description": "Animasi 3D (3 Dimensi) adalah bentuk animasi yang menggunakan objek dan lingkungan tiga dimensi, sehingga memberikan kesan lebih realistis dibandingkan animasi 2D. Dalam animasi ini, karakter dan latar belakang dibuat memiliki panjang, lebar, dan tinggi, yang memungkinkan pencahayaan, bayangan, tekstur, serta pergerakan kamera terasa lebih hidup."
     },
     {
       "title": "Stop Motion",
-      "url": "https://drive.google.com/file/d/1o2YPt_zQxl0d5VjPmgy1nMI9YYOjt8Xn/view?usp=sharing",
+      "url": "https://youtu.be/H1cCU62loqU?si=7bkWjx1-2o2rkz0e",
       "description": "Stop Motion Animation adalah teknik animasi yang menciptakan ilusi gerakan dengan cara memotret objek satu per satu dalam berbagai posisi, lalu menyusun foto-foto tersebut secara berurutan menjadi video yang tampak bergerak."
     },
     {
       "title": "Animasi Tradisional",
-      "url": "https://drive.google.com/file/d/1KiI81Ytjhpp7eWjFnF-Glen-tDaj80H6/view?usp=sharing",
+      "url": "https://drive.google.com/file/d/14YDHgpJYpHRfaYu2CWFYPbvo0x0uNugf/view?usp=sharing",
       "description": "Animasi Tradisional (Cel Animation / Hand-drawn) adalah jenis animasi yang menggunakan teknik menggambar tangan di atas kertas atau media transparan untuk menciptakan ilusi gerakan. Teknik ini sudah ada sejak lama dan menjadi teknik dasar dalam pengembangan animasi di layar kaca dan layar perak."
     },
     {
       "title": "Cut-Out Animation",
-      "url": "https://drive.google.com/file/d/1v0w7Xs0c_XhrPmABH3eAvfnjYWsBD8h4/view?usp=sharing",
+      "url": "https://youtu.be/D306PFWwTjE?si=V40d_5FNb15jhfNi",
       "description": "Cut-out Animation adalah teknik animasi yang dibuat dengan cara memotong gambar atau objek dari media dua dimensi, seperti kertas atau gambar digital, dan kemudian menyusunnya untuk membentuk karakter atau elemen lain dalam animasi."
     },
     {
       "title": "Rotoscoping",
-      "url": "https://drive.google.com/file/d/1IflV5RbwXTtY58lYCKrklC9z22g5Y9zV/view?usp=sharing",
+      "url": "https://youtu.be/JdwZCndNyxk?si=cYxHVHjfgNsLGnF3",
       "description": "Rotoscoping Animation adalah teknik animasi yang melibatkan penggambaran ulang rekaman aksi langsung untuk menciptakan animasi. Teknik ini pertama kali ditemukan oleh Max Fleischer pada awal abad ke-20."
     },
     {
       "title": "Looping Animation",
-      "url": "https://drive.google.com/file/d/1v0w7Xs0c_XhrPmABH3eAvfnjYWsBD8h4/view?usp=sharing",
+      "url": "https://youtu.be/7Gh7yJ4sj8k?si=JyPY1qP6VnicXTOB",
       "description": "Looping Animation adalah teknik animasi yang digunakan untuk menciptakan urutan gambar yang dapat diputar berulang kali tanpa terlihat terputus. Teknik ini sangat berguna untuk menghemat waktu dan sumber daya dalam produksi animasi."
     },
     {
       "title": "Animasi Siluet",
-      "url": "https://drive.google.com/file/d/1v0w7Xs0c_XhrPmABH3eAvfnjYWsBD8h4/view?usp=sharing",
+      "url": "https://youtu.be/E4DB8H13oqw?si=xZutR7y_iyaH5qTv",
       "description": "Animasi Siluet adalah jenis animasi di mana karakter-karakternya hanya terlihat sebagai siluet hitam, dengan pencahayaan latar belakang yang membuat objek atau karakter terlihat dalam bentuk bayangan gelap."
     }
   ]
