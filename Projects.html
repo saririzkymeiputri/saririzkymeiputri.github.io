@@ -1,0 +1,821 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sari Rizky Mei Putri</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css"
+      rel="stylesheet"
+    />
+    <script defer src="js/datacard.js"></script>
+    <link rel="stylesheet" href="css/style.css" />
+    <style>
+      .blog-card {
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+        background-color: #f3e8ff;
+      }
+
+      .blog-card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 10px 15px -3px rgba(192, 132, 252, 0.1),
+          0 4px 6px -2px rgba(192, 132, 252, 0.05);
+      }
+
+      .blog-image {
+        height: 200px;
+        object-fit: cover;
+      }
+
+      .blog-tag {
+        background-color: #e9d5ff;
+        color: #6b21a8;
+        transition: background-color 0.3s ease, color 0.3s ease;
+      }
+
+      .blog-tag:hover {
+        background-color: #c084fc;
+        color: white;
+      }
+
+      .glassmorphism {
+        background: rgba(245, 243, 255, 0.7);
+        backdrop-filter: blur(10px);
+        border: 1px solid rgba(192, 132, 252, 0.1);
+      }
+    </style>
+  </head>
+
+  <body class="bg-pastel-purple">
+    <header class="bg-purple-100 shadow-lg">
+      <div class="max-w-6xl mx-auto px-4 py-4">
+        <h1 class="text-2xl font-bold text-purple-900">Projects</h1>
+      </div>
+    </header>
+    <div class="bg-pastel-purple p-6 md:p-8">
+      <h1
+        class="text-2xl md:text-3xl font-bold mb-3 text-transparent bg-clip-text bg-gradient-to-r from-purple-600 to-pink-500"
+      >
+        Sistem Multimedia: Komponen, Jenis, dan Aplikasi
+      </h1>
+
+      <div class="glassmorphism rounded-lg overflow-hidden shadow-lg mb-8">
+        <div
+          class="bg-purple-100 py-2 px-4 border-b border-purple-200 flex items-center"
+        >
+          <span class="font-medium text-purple-900"
+            >Laporan UTS Multimedia Sari Rizky Mei Putri</span
+          >
+        </div>
+        <div class="p-4 flex justify-center items-center">
+          <iframe
+            src="assets/Laporan UTS Multimedia Sari Rizky Mei Putri_2407111562.pdf"
+            class="w-full h-96 border-0"
+            title="Sistem Multimedia PDF"
+          ></iframe>
+        </div>
+      </div>
+
+      <section id="format" class="max-w-6xl mx-auto py-16 bg-purple-50">
+        <div class="container mx-auto px-4 md:px-6">
+          <div class="text-center mb-10">
+            <h2
+              class="text-3xl font-bold inline-block relative text-purple-900"
+            >
+              Format Media
+              <div
+                class="absolute bottom-0 left-0 h-1 bg-purple-300"
+                style="width: 100%"
+              ></div>
+            </h2>
+            <p class="text-purple-700 mt-4 max-w-2xl mx-auto">
+              Beberapa format media yang dapat digunakan untuk berbagai
+              keperluan
+            </p>
+          </div>
+          <div class="flex flex-wrap justify-center mb-8 gap-2">
+            <button
+              class="format-btn px-4 py-2 rounded-full flex items-center gap-2 text-sm font-medium transition-all duration-200 bg-purple-500 text-white hover:bg-purple-400 hover:text-purple-900"
+              data-target="video"
+            >
+              <svg
+                class="w-5 h-5"
+                viewBox="0 0 24 24"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M18 7L16 7M18 11H16M18 15H16M6 7H8M6 11H8M6 15H8M9 18H15C16.6569 18 18 16.6569 18 15V9C18 7.34315 16.6569 6 15 6H9C7.34315 6 6 7.34315 6 9V15C6 16.6569 7.34315 18 9 18Z"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                ></path>
+              </svg>
+              Video
+            </button>
+            <button
+              class="format-btn px-4 py-2 rounded-full flex items-center gap-2 text-sm font-medium transition-all duration-200 bg-purple-50 text-gray-700 hover:bg-purple-100 hover:text-purple-700"
+              data-target="audio"
+            >
+              <svg
+                class="w-5 h-5"
+                viewBox="0 0 24 24"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M9 18V12M15 18V12M9 12V6C9 4.34315 10.3431 3 12 3V3C13.6569 3 15 4.34315 15 6V12M9 12H15M19 12H21M3 12H5"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                ></path>
+              </svg>
+              Audio
+            </button>
+            <button
+              class="format-btn px-4 py-2 rounded-full flex items-center gap-2 text-sm font-medium transition-all duration-200 bg-purple-50 text-gray-700 hover:bg-purple-100 hover:text-purple-700"
+              data-target="image"
+            >
+              <svg
+                class="w-5 h-5"
+                viewBox="0 0 24 24"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M2 12.5V12C2 7.28595 2 4.92893 3.46447 3.46447C4.92893 2 7.28595 2 12 2C16.714 2 19.0711 2 20.5355 3.46447C22 4.92893 22 7.28595 22 12C22 16.714 22 19.0711 20.5355 20.5355C19.0711 22 16.714 22 12 22C7.28595 22 4.92893 22 3.46447 20.5355C2 19.0711 2 16.714 2 12Z"
+                  stroke="currentColor"
+                  stroke-width="2"
+                ></path>
+                <circle
+                  cx="16"
+                  cy="8"
+                  r="2"
+                  stroke="currentColor"
+                  stroke-width="2"
+                ></circle>
+                <path
+                  d="M2 12.5L3.752 10.329C4.718 9.116 6.46 9.039 7.518 10.163L11.662 14.662C12.378 15.436 13.585 15.437 14.302 14.664L14.782 14.144C15.893 12.933 17.877 12.949 18.968 14.18L22 17.5"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                ></path>
+              </svg>
+              Gambar
+            </button>
+            <button
+              class="format-btn px-4 py-2 rounded-full flex items-center gap-2 text-sm font-medium transition-all duration-200 bg-purple-50 text-gray-700 shadow-md"
+              data-target="animation"
+            >
+              <svg
+                class="w-5 h-5"
+                viewBox="0 0 24 24"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M20 12C20 16.4183 16.4183 20 12 20C7.58172 20 4 16.4183 4 12C4 7.58172 7.58172 4 12 4"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                ></path>
+                <path
+                  d="M10 8L14 12L10 16"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                ></path>
+                <path
+                  d="M20 4V8H16"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                ></path>
+              </svg>
+              Animasi
+            </button>
+            <button
+              class="format-btn px-4 py-2 rounded-full flex items-center gap-2 text-sm font-medium transition-all duration-200 bg-purple-50 text-gray-700 shadow-md"
+              data-target="text-font"
+            >
+              <svg
+                class="w-5 h-5"
+                viewBox="0 0 24 24"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M12 3L12 21M9 21H15M19 7L5 7M19 11L5 11M19 15L5 15"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+              Text Font
+            </button>
+          </div>
+          <div class="bg-purple-50 rounded-xl shadow-md p-6">
+            <div id="video" class="format-content">
+              <div class="flex items-center mb-6">
+                <span class="bg-purple-100 text-purple-600 p-2 rounded-lg mr-3">
+                  <svg
+                    class="w-5 h-5"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M18 7L16 7M18 11H16M18 15H16M6 7H8M6 11H8M6 15H8M9 18H15C16.6569 18 18 16.6569 18 15V9C18 7.34315 16.6569 6 15 6H9C7.34315 6 6 7.34315 6 9V15C6 16.6569 7.34315 18 9 18Z"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    ></path>
+                  </svg>
+                </span>
+                <div>
+                  <h3 class="text-xl font-semibold text-purple-900">
+                    Video Formats
+                  </h3>
+                  <p class="text-purple-700 text-sm">
+                    Video menggabungkan gambar bergerak dan audio untuk
+                    memberikan pengalaman yang lebih kaya. Aspek penting video
+                    dalam multimedia:
+                  </p>
+                </div>
+              </div>
+              <div>
+                <p class="text-purple-700 text-mb mb-4">
+                  Format video populer:
+                </p>
+              </div>
+              <div
+                id="format-container"
+                class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6"
+              ></div>
+
+              <div>
+                <p class="text-purple-700 text-mb mt-2 mb-4">
+                  Standar kompresi video
+                </p>
+              </div>
+              <div
+                id="standar-container"
+                class="grid grid-cols-1 sm:grid-cols-3 md:grid-cols-4 gap-3"
+              ></div>
+              <div>
+                <p class="text-purple-700 text-mb mt-2 mb-4">
+                  Teknik pengeditan video
+                </p>
+                <p class="text-purple-700 text-mb mt-2 mb-4">
+                  Streaming vs Unduhan
+                </p>
+                <p class="text-purple-700 text-mb mt-2 mb-4">
+                  Video interaktif
+                </p>
+              </div>
+            </div>
+            <div id="audio" class="format-content hidden">
+              <div class="flex items-center mb-6">
+                <span class="bg-purple-100 text-purple-600 p-2 rounded-lg mr-3">
+                  <svg
+                    class="w-5 h-5"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M9 18V12M15 18V12M9 12V6C9 4.34315 10.3431 3 12 3V3C13.6569 3 15 4.34315 15 6V12M9 12H15M19 12H21M3 12H5"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    ></path>
+                  </svg>
+                </span>
+                <div>
+                  <h3 class="text-xl font-semibold text-purple-900">
+                    Audio Formats
+                  </h3>
+                  <p class="text-purple-700 text-sm">
+                    Audio memberikan dimensi pendengaran dalam sistem
+                    multimedia. Elemen audio mencakup:
+                  </p>
+                </div>
+              </div>
+              <div
+                id="audio-container"
+                class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-3"
+              ></div>
+            </div>
+            <div id="image" class="format-content hidden">
+              <div class="flex items-center mb-6">
+                <span class="bg-purple-100 text-purple-600 p-2 rounded-lg mr-3">
+                  <svg
+                    class="w-5 h-5"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M2 12.5V12C2 7.28595 2 4.92893 3.46447 3.46447C4.92893 2 7.28595 2 12 2C16.714 2 19.0711 2 20.5355 3.46447C22 4.92893 22 7.28595 22 12C22 16.714 22 19.0711 20.5355 20.5355C19.0711 22 16.714 22 12 22C7.28595 22 4.92893 22 3.46447 20.5355C2 19.0711 2 16.714 2 12Z"
+                      stroke="currentColor"
+                      stroke-width="2"
+                    ></path>
+                    <circle
+                      cx="16"
+                      cy="8"
+                      r="2"
+                      stroke="currentColor"
+                      stroke-width="2"
+                    ></circle>
+                    <path
+                      d="M2 12.5L3.752 10.329C4.718 9.116 6.46 9.039 7.518 10.163L11.662 14.662C12.378 15.436 13.585 15.437 14.302 14.664L14.782 14.144C15.893 12.933 17.877 12.949 18.968 14.18L22 17.5"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                    ></path>
+                  </svg>
+                </span>
+                <div>
+                  <h3 class="text-xl font-semibold text-purple-900">
+                    Gambar Formats
+                  </h3>
+                  <p class="text-purple-700 text-sm">
+                    Gambar dalam multimedia mencakup foto, ilustrasi, grafik,
+                    dan representasi visual lainnya. Beberapa aspek penting
+                    gambar dalam multimedia:
+                  </p>
+                </div>
+              </div>
+              <div
+                id="gambar-container"
+                class="grid grid-cols-1 sm:grid-cols-3 md:grid-cols-4 gap-3"
+              ></div>
+            </div>
+            <div id="animation" class="format-content hidden">
+              <div class="flex items-center mb-6">
+                <span class="bg-purple-100 text-purple-600 p-2 rounded-lg mr-3">
+                  <svg
+                    class="w-5 h-5"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M20 12C20 16.4183 16.4183 20 12 20C7.58172 20 4 16.4183 4 12C4 7.58172 7.58172 4 12 4"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                    ></path>
+                    <path
+                      d="M10 8L14 12L10 16"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    ></path>
+                    <path
+                      d="M20 4V8H16"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    ></path>
+                  </svg>
+                </span>
+                <div>
+                  <h3 class="text-xl font-semibold text-purple-900">
+                    Animasi Formats
+                  </h3>
+                  <p class="text-purple-700 text-sm">
+                    Animasi adalah simulasi gerakan yang dibuat dengan
+                    menampilkan serangkaian gambar atau frame. Aspek penting
+                    animasi:
+                  </p>
+                </div>
+              </div>
+              <div
+                id="animasi-container"
+                class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-3"
+              ></div>
+            </div>
+            <div id="text-font" class="format-content hidden">
+              <div class="flex items-center mb-6">
+                <span class="bg-purple-100 text-purple-600 p-2 rounded-lg mr-3">
+                  <svg
+                    class="w-5 h-5"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M12 3L12 21M9 21H15M19 7L5 7M19 11L5 11M19 15L5 15"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                  </svg>
+                </span>
+                <div>
+                  <h3 class="text-xl font-semibold text-purple-900">
+                    Text Font Formats
+                  </h3>
+                  <p class="text-purple-700 text-sm">
+                    Teks merupakan elemen dasar multimedia yang digunakan untuk
+                    menyampaikan informasi. Dalam sistem multimedia, teks dapat
+                    dimanipulasi dengan berbagai cara termasuk:
+                  </p>
+                </div>
+              </div>
+              <div class="grid grid-cols-1 sm:grid-cols-3 md:grid-cols-4 gap-3">
+                <a
+                  onclick="showFontSample('Times New Roman')"
+                  class="bg-purple-100 border border-purple-200 rounded-lg p-3 hover:shadow-md hover:border-purple-200 transition-all group cursor-pointer"
+                >
+                  <span
+                    class="text-base font-medium text-purple-700 group-hover:text-purple-600 transition-colors text-left"
+                  >
+                    Times New Roman
+                  </span>
+                  <p class="text-sm text-gray-600 mt-2 text-left">
+                    Times New Roman merupakan jenis font serif klasik yang
+                    sering digunakan dalam dokumen formal, laporan ilmiah, dan
+                    karya akademik. Font ini dikenal karena tampilannya yang
+                    elegan dan keterbacaannya yang tinggi, sehingga menjadi
+                    pilihan utama dalam penulisan naskah resmi dan struktur teks
+                    panjang. Karakteristik serif-nya memberikan nuansa
+                    tradisional dan profesional.
+                  </p>
+                </a>
+                <a
+                  onclick="showFontSample('Arial')"
+                  class="bg-purple-100 border border-purple-200 rounded-lg p-3 hover:shadow-md hover:border-purple-200 transition-all group cursor-pointer"
+                >
+                  <span
+                    class="text-base font-medium text-purple-700 group-hover:text-purple-600 transition-colors text-left"
+                  >
+                    Arial
+                  </span>
+                  <p class="text-sm text-gray-600 mt-2 text-left">
+                    Arial adalah font sans-serif yang populer digunakan karena
+                    tampilannya yang bersih dan sederhana. Font ini umum
+                    dijumpai dalam dokumen digital dan presentasi karena
+                    keterbacaannya sangat baik di layar maupun cetakan. Arial
+                    juga salah menjadi satu font default di berbagai perangkat
+                    lunak pengolah kata.
+                  </p>
+                </a>
+                <a
+                  onclick="showFontSample('Calibri')"
+                  class="bg-purple-100 border border-purple-200 rounded-lg p-3 hover:shadow-md hover:border-purple-200 transition-all group cursor-pointer"
+                >
+                  <span
+                    class="text-base font-medium text-purple-700 group-hover:text-purple-600 transition-colors text-left"
+                  >
+                    Calibri
+                  </span>
+                  <p class="text-sm text-gray-600 mt-2 text-left">
+                    Calibri adalah font default Microsoft Office sejak tahun
+                    2007 dan dikenal karena desainnya yang modern dan
+                    proporsional. Sebagai font sans-serif, Calibri memberikan
+                    kesan profesional namun tetap santai, cocok untuk
+                    presentasi, laporan kerja, dan komunikasi digital.
+                  </p>
+                </a>
+                <a
+                  onclick="showFontSample('Verdana')"
+                  class="bg-purple-100 border border-purple-200 rounded-lg p-3 hover:shadow-md hover:border-purple-200 transition-all group cursor-pointer"
+                >
+                  <span
+                    class="text-base font-medium text-purple-700 group-hover:text-purple-600 transition-colors text-left"
+                  >
+                    Verdana
+                  </span>
+                  <p class="text-sm text-gray-600 mt-2 text-left">
+                    Verdana dirancang khusus untuk keterbacaan tinggi di layar
+                    digital. Font ini memiliki spasi antar karakter yang lebar
+                    dan bentuk huruf yang terbuka, sehingga sangat ideal untuk
+                    tampilan web dan presentasi yang memerlukan teks yang mudah
+                    dibaca dalam ukuran kecil.
+                  </p>
+                </a>
+                <a
+                  onclick="showFontSample('Georgia')"
+                  class="bg-purple-100 border border-purple-200 rounded-lg p-3 hover:shadow-md hover:border-purple-200 transition-all group cursor-pointer"
+                >
+                  <span
+                    class="text-base font-medium text-purple-700 group-hover:text-purple-600 transition-colors text-left"
+                  >
+                    Georgia
+                  </span>
+                  <p class="text-sm text-gray-600 mt-2 text-left">
+                    Georgia adalah font serif yang dirancang agar tetap mudah
+                    dibaca di layar komputer. Dengan desain yang elegan namun
+                    kuat, Georgia sering digunakan dalam penulisan artikel
+                    online, blog, dan situs web profesional, menggabungkan
+                    tampilan tradisional dan teknologi digital.
+                  </p>
+                </a>
+                <a
+                  onclick="showFontSample('Helvetica')"
+                  class="bg-purple-100 border border-purple-200 rounded-lg p-3 hover:shadow-md hover:border-purple-200 transition-all group cursor-pointer"
+                >
+                  <span
+                    class="text-base font-medium text-purple-700 group-hover:text-purple-600 transition-colors text-left"
+                  >
+                    Helvetica
+                  </span>
+                  <p class="text-sm text-gray-600 mt-2 text-left">
+                    Helvetica adalah font sans-serif yang sangat populer di
+                    dunia desain grafis karena tampilannya yang bersih, netral,
+                    dan serbaguna. Font ini banyak digunakan dalam desain logo,
+                    branding, dan antarmuka pengguna karena sifatnya yang
+                    minimalis dan modern.
+                  </p>
+                </a>
+                <a
+                  onclick="showFontSample('Cambria')"
+                  class="bg-purple-100 border border-purple-200 rounded-lg p-3 hover:shadow-md hover:border-purple-200 transition-all group cursor-pointer"
+                >
+                  <span
+                    class="text-base font-medium text-purple-700 group-hover:text-purple-600 transition-colors text-left"
+                  >
+                    Cambria
+                  </span>
+                  <p class="text-sm text-gray-600 mt-2 text-left">
+                    Cambria adalah font serif yang dirancang untuk keterbacaan
+                    tinggi, baik di layar maupun cetakan. Font ini sering
+                    digunakan dalam dokumen akademik dan profesional karena
+                    bentuk hurufnya yang seimbang dan jelas, cocok untuk teks
+                    naratif dan struktur paragraf panjang.
+                  </p>
+                </a>
+                <a
+                  onclick="showFontSample('Roboto')"
+                  class="bg-purple-100 border border-purple-200 rounded-lg p-3 hover:shadow-md hover:border-purple-200 transition-all group cursor-pointer"
+                >
+                  <span
+                    class="text-base font-medium text-purple-700 group-hover:text-purple-600 transition-colors text-left"
+                  >
+                    Roboto
+                  </span>
+                  <p class="text-sm text-gray-600 mt-2 text-left">
+                    Roboto punya kelebihan dalam keterbacaan karena tinggi hurufnya pas, jadi nyaman dibaca di berbagai layar. 
+                    Bentuk ovalnya memberi kesan netral tapi tetap ramah, tidak kaku. 
+                    Selain itu, struktur geometris dari huruf-huruf Roboto memberi tampilan yang modern dan rapi, cocok untuk desain digital masa kini.
+                  </p>
+                </a>
+                <a
+                  onclick="showFontSample('Montserrat')"
+                  class="bg-purple-100 border border-purple-200 rounded-lg p-3 hover:shadow-md hover:border-purple-200 transition-all group cursor-pointer"
+                >
+                  <span
+                    class="text-base font-medium text-purple-700 group-hover:text-purple-600 transition-colors text-left"
+                  >
+                    Montserrat
+                  </span>
+                  <p class="text-sm text-gray-600 mt-2 text-left">
+                    Montserrat adalah font sans-serif bergaya geometris yang
+                    memberikan kesan modern dan dinamis. Font ini sering
+                    digunakan dalam desain web, poster, dan branding karena
+                    tampilannya yang stylish dan ramah visual, cocok untuk
+                    komunikasi kreatif dan konten digital.
+                  </p>
+                </a>
+                <a
+                  onclick="showFontSample('Poppins')"
+                  class="bg-purple-100 border border-purple-200 rounded-lg p-3 hover:shadow-md hover:border-purple-200 transition-all group cursor-pointer"
+                >
+                  <span
+                    class="text-base font-medium text-purple-700 group-hover:text-purple-600 transition-colors text-left"
+                  >
+                    Poppins
+                  </span>
+                  <p class="text-sm text-gray-600 mt-2 text-left">
+                    Poppins adalah font sans-serif modern dengan bentuk huruf
+                    yang bulat dan simetris. Dengan estetika kontemporer,
+                    Poppins sering digunakan dalam desain antarmuka, aplikasi
+                    mobile, dan presentasi visual karena memberikan kesan
+                    bersih, segar, dan mudah diakses.
+              </p>
+            </a>
+            <a
+              onclick="showFontSample('Didot')"
+              class="bg-purple-100 border border-purple-200 rounded-lg p-3 hover:shadow-md hover:border-purple-200 transition-all group cursor-pointer"
+            >
+              <span
+                class="text-base font-medium text-purple-700 group-hover:text-purple-600 transition-colors text-left"
+              >
+                Didot
+              </span>
+              <p class="text-sm text-gray-600 mt-2 text-left">
+                Font Didot dikenal dengan tampilannya yang elegan, mewah, dan tajam. Karakteristik garis tipis dan tebalnya menciptakan kesan berkelas. 
+                Font ini sering dipakai untuk judul karena serifnya yang halus dan tegas. Didot juga memberikan tampilan yang sangat bersih dan tajam,
+                sehingga cocok digunakan untuk logo, majalah, dan branding dengan kesan eksklusif.
+              </div>
+            </div>
+            <div
+              class="mt-8 bg-purple-100 border border-purple-200 rounded-lg p-4 text-center"
+            >
+              <p class="text-purple-800 text-sm">
+                Tip: Pilih format berdasarkan kebutuhan dan kompatibilitas
+                dengan perangkat yang digunakan.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+      <div class="mb-6">
+        <main class="max-w-6xl mx-auto px-4 py-12">
+          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <!-- Blog Post 1 -->
+            <div
+              class="blog-card bg-purple-50 rounded-lg overflow-hidden shadow-md"
+            >
+              <img
+                src="assets/Project 1.jpeg"
+                alt="Project 1"
+                class="w-full blog-image"
+              />
+              <div class="p-6">
+                <div class="flex flex-wrap gap-2 mb-4">
+                  <span class="blog-tag px-3 py-1 rounded-full text-sm"
+                    >Web Development</span
+                  >
+                  <span class="blog-tag px-3 py-1 rounded-full text-sm"
+                    >UI/UX</span
+                  >
+                </div>
+                <h2 class="text-2xl font-bold text-gray-800 mb-2">
+                  Membuat Desain layout katalog produk e-commerce
+                </h2>
+                <p class="text-gray-600 mb-4">
+                  Layout katalog produk e-commerce menampilkan produk dalam grid
+                  dengan gambar, harga, dan tombol aksi. Dilengkapi filter untuk
+                  memudahkan pencarian dan responsif di berbagai perangkat.
+                </p>
+                <a href="#" class="text-blue-600 font-semibold hover:underline"
+                  >Read More →</a
+                >
+              </div>
+            </div>
+
+            <!-- Blog Post 2 -->
+            <div
+              class="blog-card bg-purple-50 rounded-lg overflow-hidden shadow-md"
+            >
+              <img
+                src="assets/Project 2.jpeg"
+                alt="Project 2"
+                class="w-full blog-image"
+              />
+              <div class="p-6">
+                <div class="flex flex-wrap gap-2 mb-4">
+                  <span class="blog-tag px-3 py-1 rounded-full text-sm"
+                    >AI</span
+                  >
+                  <span class="blog-tag px-3 py-1 rounded-full text-sm"
+                    >Machine Learning</span
+                  >
+                </div>
+                <h2 class="text-2xl font-bold text-gray-800 mb-2">
+                  membuat desain Time Pickers menggunakan Canva
+                </h2>
+                <p class="text-gray-600 mb-4">
+                  Desain Time Pickers menampilkan dropdown atau slider untuk
+                  memilih jam dan menit, dengan tombol konfirmasi, simpel dan
+                  mudah digunakan.
+                </p>
+                <a href="#" class="text-blue-600 font-semibold hover:underline"
+                  >Read More →</a
+                >
+              </div>
+            </div>
+
+          </div>
+        </main>
+      </div>
+    </div>
+    <div
+      id="fontModal"
+      class="hidden fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center p-4"
+    >
+      <div class="bg-purple-50 rounded-lg p-6 max-w-md w-full">
+        <div class="flex justify-between items-center mb-4">
+          <h3 class="text-xl font-semibold" id="fontModalTitle"></h3>
+          <button
+            onclick="closeFontModal()"
+            class="text-gray-500 hover:text-gray-700"
+          >
+            <svg
+              class="w-6 h-6"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M6 18L18 6M6 6l12 12"
+              ></path>
+            </svg>
+          </button>
+        </div>
+        <p id="fontSampleText" class="text-lg">
+          The quick brown fox jumps over the lazy dog.
+        </p>
+      </div>
+    </div>
+    <footer class="bg-dark-purple py-8">
+      <div class="max-w-6xl mx-auto px-4">
+        <div class="flex flex-col md:flex-row items-center justify-between">
+          <p
+            class="text-purple-800 font-bold text-center md:text-left mb-4 md:mb-0"
+          >
+            © 2025 Sari Rizky Mei Putri. All rights reserved.
+          </p>
+          <div class="flex space-x-4">
+            <a
+              href="#"
+              class="text-purple-400 hover:text-accent-purple transition duration-300"
+            >
+              <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                <path
+                  d="M24 4.557c-.883.392-1.832.656-2.828.775 1.017-.609 1.798-1.574 2.165-2.724-.951.564-2.005.974-3.127 1.195-.897-.957-2.178-1.555-3.594-1.555-3.179 0-5.515 2.966-4.797 6.045-4.091-.205-7.719-2.165-10.148-5.144-1.29 2.213-.669 5.108 1.523 6.574-.806-.026-1.566-.247-2.229-.616-.054 2.281 1.581 4.415 3.949 4.89-.693.188-1.452.232-2.224.084.626 1.956 2.444 3.379 4.6 3.419-2.07 1.623-4.678 2.348-7.29 2.04 2.179 1.397 4.768 2.212 7.548 2.212 9.142 0 14.307-7.721 13.995-14.646.962-.695 1.797-1.562 2.457-2.549z"
+                />
+              </svg>
+            </a>
+            <a
+              href="#"
+              class="text-purple-400 hover:text-accent-purple transition duration-300"
+            >
+              <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                <path
+                  d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"
+                />
+              </svg>
+            </a>
+            <a
+              href="#"
+              class="text-purple-400 hover:text-accent-purple transition duration-300"
+            >
+              <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                <path
+                  d="M4.98 3.5c0 1.381-1.11 2.5-2.48 2.5s-2.48-1.119-2.48-2.5c0-1.38 1.11-2.5 2.48-2.5s2.48 1.12 2.48 2.5zm.02 4.5h-5v16h5v-16zm7.982 0h-4.968v16h4.969v-8.399c0-4.67 6.029-5.052 6.029 0v8.399h4.988v-10.131c0-7.88-8.922-7.593-11.018-3.714v-2.155z"
+                />
+              </svg>
+            </a>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const formatButtons = document.querySelectorAll(".format-btn");
+        const formatContents = document.querySelectorAll(".format-content");
+
+        formatButtons.forEach((button) => {
+          button.addEventListener("click", () => {
+            const target = button.getAttribute("data-target");
+
+            // Remove active state from all buttons
+            formatButtons.forEach((btn) => {
+              btn.classList.remove("bg-purple-500", "text-white", "shadow-md");
+              btn.classList.add("bg-purple-50", "text-gray-700");
+            });
+
+            // Add active state to the clicked button
+            button.classList.remove("bg-purple-50", "text-gray-700");
+            button.classList.add("bg-purple-500", "text-white", "shadow-md");
+
+            // Hide all content
+            formatContents.forEach((content) => {
+              content.classList.add("hidden");
+            });
+
+            // Show the target content
+            document.getElementById(target).classList.remove("hidden");
+          });
+        });
+      });
+
+      function showFontSample(fontName) {
+        document.getElementById("fontModalTitle").textContent = fontName;
+        document.getElementById("fontSampleText").style.fontFamily = fontName;
+        document.getElementById("fontModal").classList.remove("hidden");
+      }
+
+      function closeFontModal() {
+        document.getElementById("fontModal").classList.add("hidden");
+      }
+    </script>
+  </body>
+</html>
