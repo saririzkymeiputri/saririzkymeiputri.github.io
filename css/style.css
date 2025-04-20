@@ -1,0 +1,30 @@
+:root {
+    --pastel-purple: #e9d8fd;
+    --soft-purple: #d6bcfa;
+    --accent-purple: #9f7aea;
+    --dark-purple: #553c9a;
+  }
+
+  .bg-pastel-purple {
+    background-color: var(--pastel-purple);
+  }
+
+  .bg-soft-purple {
+    background-color: var(--soft-purple);
+  }
+
+  .text-accent-purple {
+    color: var(--accent-purple);
+  }
+
+  .text-dark-purple {
+    color: var(--dark-purple);
+  }
+
+  .hover\:text-accent-purple:hover {
+    color: var(--accent-purple);
+  }
+
+  .hover\:bg-soft-purple:hover {
+    background-color: var(--soft-purple);
+  }

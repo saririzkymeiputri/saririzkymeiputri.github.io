@@ -1,99 +1,487 @@
 <!DOCTYPE html>
-<html lang="id">
+<html lang="en">
+
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Contact Me</title>
-  <link rel="stylesheet" href="style.css" />
-  <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sari Rizky Mei Putri</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
   <style>
-    body {
-      font-family: 'Poppins', sans-serif;
-      background: linear-gradient(to right, #D8BFD8, #E6E6FA);
-      margin: 0;
-      padding: 0;
+    .skill-card {
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
     }
 
-    .container {
-      max-width: 900px;
-      margin: 100px auto;
-      padding: 20px;
+    .skill-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+    }
+
+    .about-section {
+      background: linear-gradient(135deg, #f9fafb 0%, #ffffff 100%);
+    }
+
+    .profile-picture {
+      border: 4px solid #ffffff;
+      box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+      transition: transform 0.3s ease;
+    }
+
+    .profile-picture:hover {
+      transform: scale(1.05);
+    }
+
+    .about-content {
       background: white;
-      border-radius: 10px;
-      box-shadow: 0 0 15px rgba(0,0,0,0.2);
+      border-radius: 1rem;
+      box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
     }
 
-    h1 {
-      text-align: center;
-      color: #6a0dad;
+    .skill-icon {
+      width: 3.5rem;
+      height: 3.5rem;
+      border-radius: 0.75rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 1.5rem;
+    }
+    .skill-title {
+      font-size: 1.25rem;
+      font-weight: 600;
+      color: #1a202c;
+      margin-bottom: 0.5rem;
+    }
+    .skill-description {
+      color: #4a5568;
+      line-height: 1.5;
     }
 
-    .contact-form, .contact-info {
-      margin-top: 40px;
+    @keyframes blink {
+      0%, 50% { opacity: 1; }
+      51%, 100% { opacity: 0; }
     }
 
-    form input, form textarea {
+    .animate-blink {
+      animation: blink 1s infinite;
+    }
+
+    main .relative {
+      z-index: 10; /* Ensure content is above the background */
+    }
+
+    @keyframes rotate-gradient {
+      0% {
+        background: linear-gradient(45deg, #9f7aea, #a183f3, #e9d8fd);
+        transform: rotate(0deg);
+      }
+      50% {
+        background: linear-gradient(135deg, #a183f3, #e9d8fd, #9f7aea);
+        transform: rotate(180deg);
+      }
+      100% {
+        background: linear-gradient(225deg, #e9d8fd, #9f7aea, #a183f3);
+        transform: rotate(360deg);
+      }
+    }
+
+    .animate-rotate-gradient {
+      width: 200%;
+      height: 200%;
+      position: absolute;
+      top: -50%;
+      left: -50%;
+      background: linear-gradient(45deg, #9f7aea, #553c9a, #e9d8fd);
+      animation: rotate-gradient 10s linear infinite;
+      z-index: 0;
+    }
+
+    body {
+      position: relative;
+      z-index: 1; /* Ensure body content is above the background */
+    }
+
+    .boxes {
+      background: linear-gradient(to top, #e9d8fd 0%, #9f7aea 100%);
       width: 100%;
-      padding: 10px;
-      margin: 10px 0;
-      border: 1px solid #ccc;
-      border-radius: 5px;
+      height: 100vh;
+      position: fixed;
+      top: 0;
+      left: 0;
+      z-index: 5; /* Ensure it stays behind other content */
     }
 
-    form button {
-      padding: 10px 20px;
-      background-color: #6a0dad;
-      color: white;
-      border: none;
-      border-radius: 5px;
-      cursor: pointer;
+    .single-box {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      overflow: hidden;
     }
 
-    .contact-info ul {
+    .single-box li {
+      position: absolute;
+      display: block;
       list-style: none;
-      padding: 0;
+      width: 25px;
+      height: 25px;
+      background: rgba(255, 255, 255, 0.2);
+      animation: animate 20s linear infinite;
+      bottom: -150px;
     }
 
-    .contact-info li {
-      margin: 10px 0;
-      font-size: 1.1em;
+    .single-box li:nth-child(1) {
+      left: 86%;
+      width: 80px;
+      height: 80px;
+      animation-delay: 0s;
     }
 
-    .contact-info a {
-      color: #6a0dad;
-      text-decoration: none;
+    .single-box li:nth-child(2) {
+      left: 12%;
+      width: 30px;
+      height: 30px;
+      animation-delay: 1.5s;
+      animation-duration: 10s;
     }
-    
+
+    .single-box li:nth-child(3) {
+      left: 29%;
+      width: 100px;
+      height: 100px;
+      animation-delay: 5.5s;
+    }
+
+    .single-box li:nth-child(4) {
+      left: 42%;
+      width: 150px;
+      height: 150px;
+      animation-delay: 0s;
+      animation-duration: 15s;
+    }
+
+    .single-box li:nth-child(5) {
+      left: 65%;
+      width: 40px;
+      height: 40px;
+      animation-delay: 0s;
+    }
+
+    .single-box li:nth-child(6) {
+      left: 15%;
+      width: 110px;
+      height: 110px;
+      animation-delay: 3.5s;
+    }
+
+    .single-box li:nth-child(7) {
+      left: 75%;
+      width: 200px;
+      height: 200px;
+      animation-delay: 4.5s;
+      bottom: -250px;
+    }
+
+    @keyframes animate {
+      0% {
+        transform: translateY(0) rotate(0deg);
+        opacity: 1;
+      }
+      100% {
+        transform: translateY(-800px) rotate(360deg);
+        opacity: 0;
+      }
+    }
   </style>
 </head>
-<body>
-    <div style="text-align: center; margin-top: 40px;">
-        <a href="index.html" class="btn" style="text-decoration: none; background-color: #6a0dad; color: white; padding: 10px 20px; border-radius: 5px;">⬅ Kembali ke Halaman Utama</a>
-      </div>
-      
-  <div class="container">
-    <h1>Get In Touch</h1>
 
-    <div class="contact-form">
-      <form action="mailto:saririzky@email.com" method="POST" enctype="text/plain">
-        <input type="text" name="Nama" placeholder="Nama Anda" required />
-        <input type="email" name="Email" placeholder="Alamat Email Anda" required />
-        <textarea name="Pesan" rows="5" placeholder="Tulis pesan Anda..." required></textarea>
-        <button type="submit">Kirim Pesan</button>
-      </form>
-    </div>
-
-    <div class="contact-info">
-      <h2>Contact Information</h2>
+<body class="bg-pastel-purple">
+  <div class="boxes">
+    <div class="single-box">
       <ul>
-        <li>📱 WhatsApp: <a href="https://wa.me/6282285468511" target="_blank">+62 812-3456-7890</a></li>
-        <li>📧 Email: <a href="email:sarirgt1@gmail.com">saririzky@email.com</a></li>
-        <li>📸 Instagram: <a href="https://www.instagram.com/saririz_?igsh=MXFnM3Y0dHQ4dTdyaQ==" target="_blank">@saririzky</a></li>
-        <li>💼 LinkedIn: <a href="https://linkedin.com/in/saririzky" target="_blank">linkedin.com/in/saririzky</a></li>
-        <li>▶️ YouTube: <a href="https://youtube.com/@saririzkymeiputri1646" target="_blank">@saririzky</a></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
       </ul>
     </div>
   </div>
+  <nav class="bg-purple-100 shadow-lg sticky top-0 z-50 transition-all duration-300">
+    <div class="max-w-6xl mx-auto px-4">
+      <div class="flex justify-between items-center">
+        <div>
+          <a href="#home" class="flex items-center py-4 px-2">
+            <span class="font-bold text-dark-purple text-2xl">Sari Rizky Mei Putri</span>
+          </a>
+        </div>
+        <div class="flex items-center space-x-1">
+          <div class="hidden md:flex items-center space-x-1">
+            <a href="#home" class="py-4 px-2 text-dark-purple font-semibold hover:text-accent-purple transition duration-300">Home</a>
+            <a href="#about" class="py-4 px-2 text-dark-purple font-semibold hover:text-accent-purple transition duration-300">About</a>
+            <a href="projects.html" class="py-4 px-2 text-dark-purple font-semibold hover:text-accent-purple transition duration-300">Projects</a>
+            <a href="#skills" class="py-4 px-2 text-dark-purple font-semibold hover:text-accent-purple transition duration-300">Skills</a>
+            <a href="#experience" class="py-4 px-2 text-dark-purple font-semibold hover:text-accent-purple transition duration-300">Experience</a>
+            <a href="#contact" class="py-4 px-2 text-dark-purple font-semibold hover:text-accent-purple transition duration-300">Contact</a>
+          </div>
+          <div class="md:hidden flex items-center">
+            <button class="outline-none mobile-menu-button p-2">
+              <svg class="w-6 h-6 text-dark-purple hover:text-accent-purple" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path d="M4 6h16M4 12h16M4 18h16"></path>
+              </svg>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="hidden mobile-menu md:hidden bg-purple-100">
+      <ul>
+        <li><a href="#home" class="block px-4 py-2 text-dark-purple hover:bg-accent-purple hover:text-white">Home</a></li>
+        <li><a href="#about" class="block px-4 py-2 text-dark-purple hover:bg-accent-purple hover:text-white">About</a></li>
+        <li><a href="projects.html" class="block px-4 py-2 text-dark-purple hover:bg-accent-purple hover:text-white">Projects</a></li>
+        <li><a href="#skills" class="block px-4 py-2 text-dark-purple hover:bg-accent-purple hover:text-white">Skills</a></li>
+        <li><a href="#experience" class="block px-4 py-2 text-dark-purple hover:bg-accent-purple hover:text-white">Experience</a></li>
+        <li><a href="#contact" class="block px-4 py-2 text-dark-purple hover:bg-accent-purple hover:text-white">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+  <main class="relative overflow-hidden">
+    <div class="absolute inset-0 z-0 animate-rotate-gradient"></div>
+    <div class="relative">
+      <section id="home" class="mt-24 max-w-6xl mx-auto relative">
+        <div class="container mx-auto px-4">
+          <div class="flex flex-col md:flex-row items-center">
+            <div class="md:w-1/2">
+              <h1 class="text-4xl md:text-5xl font-bold text-dark-purple leading-tight">
+                <span id="typing-animation"></span>
+              </h1>
+              <p class="text-dark-purple mt-6 text-lg">We provide innovative solutions for your business needs.</p>
+              <div class="mt-10">
+                <a href="#" class="bg-purple-400 text-white px-8 py-4 rounded-full font-semibold hover:bg-purple-800 transition duration-300">Selengkapnya 🚀</a>
+              </div>
+            </div>
+            <div class="md:w-1/2 mt-12 md:mt-0">
+              <img src="https://saririzkymeiputri.github.io/profile.jpg" alt="Hero Image" class="rounded-lg shadow-lg">
+            </div>
+          </div>
+        </div>
+      </section>  
+      <section id="about" class="mt-20 py-16 bg-soft-purple">
+        <div class="max-w-6xl mx-auto px-4">
+          <div class="text-center">
+            <h2 class="text-4xl font-bold text-center text-gray-800 mb-12 inline-block relative">About Me
+              <div class="absolute bottom-0 left-0 h-1 bg-yellow-500" style="width: 100%;"></div>
+            </h2>
+          </div>
+          <div class="flex flex-col md:flex-row items-center gap-12">
+            <div class="md:w-1/3">
+              <img src="https://saririzkymeiputri.github.io/profile.jpg" alt="Profile Picture" class="rounded-full shadow-xl w-64 h-64 object-cover mx-auto">
+            </div>
+            <div class="md:w-2/3">
+              <div class="bg-white p-8 rounded-xl shadow-lg">
+                <p class="text-dark-purple mb-4 leading-relaxed font-bold">Nama saya Sari, seorang mahasiswa di Universitas Riau, yang sedang belajar dan mengembangkan keterampilan di bidang teknologi. Saya memiliki minat dalam desain UI/UX, website dan AI. Selain itu, saya juga sedang mempelajari beberapa bahasa pemrograman untuk mendukung progres pengembangan web saya.</p>
+                <p class="text-dark-purple mb-4 leading-relaxed font-bold">Selain keterampilan teknis, saya juga tertarik dengan public speaking, khususnya dalam hal presentasi. Selama ini, saya sudah beberapa kali melakukan presentasi di lingkungan akademik, dan saya ingin terus meningkatkan kemampuan saya dalam berbicara di depan umum. Saya berharap bisa mendapatkan lebih banyak pengalaman dengan berbicara di seminar atau komunitas teknologi, terutama dalam topik UI/UX dan web development.</p>
+                <p class="text-dark-purple leading-relaxed font-bold">Saat ini, saya masih dalam tahap belajar dan ingin terus berkembang. Saya ingin bertemu dengan orang-orang yang memiliki minat serupa, belajar dari mereka, serta berbagi wawasan yang saya miliki. Saya percaya bahwa dengan terus berlatih dan mencoba hal baru, agar saya bisa menjadi lebih baik di bidang yang saya tekuni.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section id="skills" class="mt-20 py-16 bg-white">
+        <div class="max-w-6xl mx-auto px-4">
+          <div class="text-center">
+            <h2 class="text-4xl font-bold text-center text-gray-800 mb-12 inline-block relative">Skills
+              <div class="absolute bottom-0 left-0 h-1 bg-yellow-500" style="width: 100%;"></div>
+            </h2>
+          </div>
+          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div class="skill-card bg-pastel-purple p-6 rounded-lg shadow-md">
+              <div class="skill-icon bg-blue-100">
+                <svg class="w-8 h-8 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"></path>
+                </svg>
+              </div>
+              <h3 class="text-2xl font-bold text-dark-purple mb-4">HTML</h3>
+              <p class="text-dark-purple">Structuring web content with semantic markup.</p>
+            </div>
+            <div class="skill-card bg-pastel-purple p-6 rounded-lg shadow-md">
+              <div class="skill-icon bg-purple-100">
+                <svg class="w-8 h-8 text-purple-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 4l16 8-16 8V4z"></path>
+                </svg>
+              </div>
+              <h3 class="text-2xl font-bold text-dark-purple mb-4">CSS</h3>
+              <p class="text-dark-purple">Styling and designing beautiful user interfaces.</p>
+            </div>
+            <div class="skill-card bg-pastel-purple p-6 rounded-lg shadow-md">
+              <div class="skill-icon bg-yellow-100">
+                <svg class="w-8 h-8 text-yellow-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path>
+                </svg>
+              </div>
+              <h3 class="text-2xl font-bold text-dark-purple mb-4">JavaScript</h3>
+              <p class="text-dark-purple">Building interactive and dynamic web applications.</p>
+            </div>
+            <div class="skill-card bg-pastel-purple p-6 rounded-lg shadow-md">
+              <div class="skill-icon bg-green-100">
+                <svg class="w-8 h-8 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"></path>
+                </svg>
+              </div>
+              <h3 class="text-2xl font-bold text-dark-purple mb-4">Writing</h3>
+              <p class="text-dark-purple">Creating clear and engaging technical content.</p>
+            </div>
+            <div class="skill-card bg-pastel-purple p-6 rounded-lg shadow-md">
+              <div class="skill-icon bg-red-100">
+                <svg class="w-8 h-8 text-red-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z"></path>
+                </svg>
+              </div>
+              <h3 class="text-2xl font-bold text-dark-purple mb-4">Communication</h3>
+              <p class="text-dark-purple">Effectively collaborating and presenting ideas.</p>
+            </div>
+          </div>
+        </div>
+      </section>
 
+      <section id="experience" class="mt-20 py-16 bg-pastel-purple">
+        <div class="max-w-6xl mx-auto px-4">
+          <div class="text-center">
+            <h2 class="text-4xl font-bold text-center text-dark-purple mb-12 inline-block relative">Certificates
+              <div class="absolute bottom-0 left-0 h-1 bg-accent-purple" style="width: 100%;"></div>
+            </h2>
+          </div>
+
+          <!-- English Certificate -->
+          <div class="mb-12">
+            <div class="grid grid-cols-1 gap-6 md:grid-cols-2 md:gap-12 items-center">
+              <div class="bg-white p-4 rounded-xl shadow-lg md:order-2">
+                <img src="https://saririzkymeiputri.github.io/sertifenglish.png" alt="English Certificate" class="w-full h-auto object-cover rounded-lg">
+              </div>
+              <div class="bg-white p-8 rounded-xl shadow-lg md:order-1">
+                <h3 class="text-2xl font-bold text-dark-purple mb-4">Certificate of English Proficiency</h3>
+                <p class="text-dark-purple mb-2"><span class="font-semibold">Eva Education Centre</span></p>
+                <p class="text-dark-purple">Successfully completed an English course with distinction, demonstrating advanced proficiency in reading, writing, and speaking.</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Microsoft Office Certificate -->
+          <div>
+            <div class="grid grid-cols-1 gap-6 md:grid-cols-2 md:gap-12 items-center">
+              <div class="bg-white p-4 rounded-xl shadow-lg">
+                <img src="https://saririzkymeiputri.github.io/computer.jpg" alt="Microsoft Office Certificate" class="w-full h-auto object-cover rounded-lg">
+              </div>
+              <div class="bg-white p-8 rounded-xl shadow-lg">
+                <h3 class="text-2xl font-bold text-dark-purple mb-4">Certificate Microsoft Office</h3>
+                <p class="text-dark-purple mb-2"><span class="font-semibold">Indragiri Komputer</span></p>
+                <p class="text-dark-purple">Joined and completed hands-on Course focused on Microsoft Office.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="contact" class="mt-20 py-16 bg-pastel-purple">
+        <div class="max-w-6xl mx-auto px-4">
+          <div class="text-center">
+            <h2 class="text-4xl font-bold text-center text-dark-purple mb-12 inline-block relative">Contact Me
+              <div class="absolute bottom-0 left-0 h-1 bg-accent-purple" style="width: 100%;"></div>
+            </h2>
+          </div>
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
+            <div class="bg-white p-8 rounded-xl shadow-lg">
+              <h3 class="text-2xl font-bold text-dark-purple mb-6">Get in Touch</h3>
+              <form class="space-y-6">
+                <div>
+                  <label for="name" class="block text-dark-purple font-medium mb-2">Name</label>
+                  <input type="text" id="name" class="w-full px-4 py-2 border border-purple-200 rounded-lg focus:ring-2 focus:ring-accent-purple focus:border-transparent" placeholder="Your name">
+                </div>
+                <div>
+                  <label for="email" class="block text-dark-purple font-medium mb-2">Email</label>
+                  <input type="email" id="email" class="w-full px-4 py-2 border border-purple-200 rounded-lg focus:ring-2 focus:ring-accent-purple focus:border-transparent" placeholder="Your email">
+                </div>
+                <div>
+                  <label for="message" class="block text-dark-purple font-medium mb-2">Message</label>
+                  <textarea id="message" rows="5" class="w-full px-4 py-2 border border-purple-200 rounded-lg focus:ring-2 focus:ring-accent-purple focus:border-transparent" placeholder="Your message"></textarea>
+                </div>
+                <button type="submit" class="w-full bg-accent-purple text-white px-6 py-3 rounded-lg hover:bg-purple-700 transition-colors">Send Message</button>
+              </form>
+            </div>
+            <div class="bg-white p-8 rounded-xl shadow-lg">
+              <h3 class="text-2xl font-bold text-dark-purple mb-6">Contact Information</h3>
+              <div class="space-y-4">
+                <div class="flex items-center">
+                  <div class="w-8 h-8 bg-purple-100 rounded-full flex items-center justify-center mr-4">
+                    <svg class="w-4 h-4 text-accent-purple" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
+                    </svg>
+                  </div>
+                  <p class="text-dark-purple">sari.rizky@example.com</p>
+                </div>
+                <div class="flex items-center">
+                  <div class="w-8 h-8 bg-purple-100 rounded-full flex items-center justify-center mr-4">
+                    <svg class="w-4 h-4 text-accent-purple" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 18h.01M8 21h8a2 2 0 002-2V5a2 2 0 00-2-2H8a2 2 0 00-2 2v14a2 2 0 002 2z"></path>
+                    </svg>
+                  </div>
+                  <p class="text-dark-purple">+62 89505283999</p>
+                </div>
+                <div class="flex items-center">
+                  <div class="w-8 h-8 bg-purple-100 rounded-full flex items-center justify-center mr-4">
+                    <svg class="w-4 h-4 text-accent-purple" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path>
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path>
+                    </svg>
+                  </div>
+                  <p class="text-dark-purple">Riau, Indonesia</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    <footer class="bg-dark-purple py-8">
+      <div class="max-w-6xl mx-auto px-4">
+        <div class="flex flex-col md:flex-row items-center justify-between">
+          <p class="text-purple-800 font-bold text-center md:text-left mb-4 md:mb-0">© 2025 Sari Rizky Mei Putri.</p>
+          <div class="flex space-x-4">
+            <a href="https://wa.me/6289505283999" class="text-purple-400 hover:text-accent-purple transition duration-300">
+              <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M17.507 14.307l-.009.075c-2.199-1.096-2.429-1.242-2.713-.816-.197.295-.771.964-.944 1.162-.175.195-.357.21-.66.075-.3-.15-1.263-.465-2.403-1.485-.888-.795-1.484-1.78-1.66-2.08-.174-.3-.019-.465.13-.606.136-.135.3-.345.45-.517.147-.172.195-.3.295-.495.1-.196.05-.367-.025-.517-.075-.15-.672-1.62-.922-2.206-.24-.584-.487-.51-.672-.51-.172 0-.367-.033-.564-.033-.196 0-.514.075-.784.375-.27.3-1.033 1.01-1.033 2.46 0 1.45 1.055 2.853 1.2 3.048.147.196 2.085 3.18 5.063 4.46.715.3 1.275.48 1.71.62.715.23 1.365.2 1.88.12.574-.09 1.765-.72 2.013-1.42.248-.7.248-1.3.173-1.42-.075-.12-.27-.195-.564-.345zM12 22.078c-5.523 0-10-4.477-10-10 0-5.523 4.477-10 10-10 5.523 0 10 4.477 10 10 0 5.523-4.477 10-10 10zm0-18c-4.418 0-8 3.582-8 8 0 4.418 3.582 8 8 8 4.418 0 8-3.582 8-8 0-4.418-3.582-8-8-8z"/></svg>
+            </a>
+            <a href="https://www.instagram.com/saririz_" class="text-purple-400 hover:text-accent-purple transition duration-300">
+              <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+              <path d="M7.75 2h8.5A5.75 5.75 0 0 1 22 7.75v8.5A5.75 5.75 0 0 1 16.25 22h-8.5A5.75 5.75 0 0 1 2 16.25v-8.5A5.75 5.75 0 0 1 7.75 2zm0 1.5A4.25 4.25 0 0 0 3.5 7.75v8.5A4.25 4.25 0 0 0 7.75 20.5h8.5a4.25 4.25 0 0 0 4.25-4.25v-8.5A4.25 4.25 0 0 0 16.25 3.5h-8.5zM12 7a5 5 0 1 1 0 10 5 5 0 0 1 0-10zm0 1.5a3.5 3.5 0 1 0 0 7 3.5 3.5 0 0 0 0-7zm4.75-.88a1.13 1.13 0 1 1 0 2.25 1.13 1.13 0 0 1 0-2.25z"/>
+            </svg>
+            </a>
+          </div>
+        </div>
+      </div>
+    </footer>
+    </div>
+  </main>
+
+  <div class="fixed bottom-4 left-4 z-50">
+    <button id="music-toggle" class="p-4 bg-accent-purple rounded-full shadow-lg hover:bg-purple-400 transition-colors">
+      <svg id="play-icon" class="w-6 h-6 text-dark-purple" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14.752 11.168l-3.197-2.132A1 1 0 0010 9.87v4.263a1 1 0 001.555.832l3.197-2.132a1 1 0 000-1.664z"/>
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/>
+      </svg>
+      <svg id="pause-icon" class="w-6 h-6 text-dark-purple hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 9v6m4-6v6m7-3a9 9 0 11-18 0 9 9 0 0118 0z"/>
+      </svg>
+    </button>
+  </div>
+
+  <audio id="background-music" loop>
+    <source src="https://hafizahdinia.github.io/assets/sampleaudio.mp3" type="audio/mpeg">
+    Your browser does not support the audio element.
+  </audio>
+
+  <script src="js/index.js"></script>
 </body>
+
 </html>

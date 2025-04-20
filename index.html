@@ -1,183 +1,488 @@
 <!DOCTYPE html>
-<html lang="id">
+<html lang="en">
+
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Portofolio - Sari Rizky Mei Putri</title>
-  <link rel="stylesheet" href="style.css" />
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
-  <script defer src="script.js"></script> <!-- Penting untuk animasi -->
-</head>
-<script>
-  document.addEventListener("DOMContentLoaded", function () {
-    const navLinks = document.querySelectorAll(".nav-links a");
-    navLinks.forEach(link => {
-      if (link.textContent.trim().toLowerCase() === "projects") {
-        link.setAttribute("href", "projects.html");
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sari Rizky Mei Putri</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <style>
+    .skill-card {
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .skill-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+    }
+
+    .about-section {
+      background: linear-gradient(135deg, #f9fafb 0%, #ffffff 100%);
+    }
+
+    .profile-picture {
+      border: 4px solid #ffffff;
+      box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+      transition: transform 0.3s ease;
+    }
+
+    .profile-picture:hover {
+      transform: scale(1.05);
+    }
+
+    .about-content {
+      background: white;
+      border-radius: 1rem;
+      box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+    }
+
+    .skill-icon {
+      width: 3.5rem;
+      height: 3.5rem;
+      border-radius: 0.75rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 1.5rem;
+    }
+    .skill-title {
+      font-size: 1.25rem;
+      font-weight: 600;
+      color: #1a202c;
+      margin-bottom: 0.5rem;
+    }
+    .skill-description {
+      color: #4a5568;
+      line-height: 1.5;
+    }
+
+    @keyframes blink {
+      0%, 50% { opacity: 1; }
+      51%, 100% { opacity: 0; }
+    }
+
+    .animate-blink {
+      animation: blink 1s infinite;
+    }
+
+    main .relative {
+      z-index: 10; /* Ensure content is above the background */
+    }
+
+    @keyframes rotate-gradient {
+      0% {
+        background: linear-gradient(45deg, #9f7aea, #a183f3, #e9d8fd);
+        transform: rotate(0deg);
       }
-    });
-  });
-</script>
-<script src="script.js"></script>
-
-<body>
-
- <!-- Navbar -->
-<header>
-  <div class="logo">Sari Rizky Mei Putri</div>
-  <nav>
-    <ul class="nav-links">
-      <li><a href="#home">Home</a></li>
-      <li><a href="#about">About</a></li>
-      <li><a href="projects.html">Projects</a></li> <!-- Sudah diperbaiki lewat JS -->
-      <li><a href="#skills">Skills</a></li>
-      <li><a href="experience.html">Experience</a></li> <!-- ✅ Ini yang harus ditambah -->
-      <li><a href="contact.html">Contact</a></li>
-    </ul>
-  </nav>
-  
-</header>
-
-
-  <!-- Hero Section -->
-  <!-- Hero Section -->
-<section id="home">
-  <div class="hero-content">
-    <h1><span id="typed-text"></span><span class="cursor">|</span></h1>
-    <a href="contact.html" class="btn">Contact Me</a>
-  </div>
-</section>
-
-  <!-- Audio Controls -->
-  <div class="audio-controls">
-    <button onclick="togglePlay()">▶️ Play / ⏸️ Pause</button>
-  </div>
-
-  <!-- About -->
-  <section id="about">
-    <h2>About Me</h2>
-    <div class="about-content">
-      
-      <div class="profile-container">
-        <img src="profile.jpg" alt="Foto Profil" class="profile-img" />
-        <div class="overlay">
-          <span class="nama">Sari Rizky Mei Putri</span>
-        </div>
-      </div>
-      
-      <p>Nama saya Sari, seorang mahasiswa di Universitas Riau, yang sedang belajar dan mengembangkan keterampilan di bidang teknologi  Saya memiliki minat dalam desain UI/UX, website dan AI. Selain itu, saya juga sedang mempelajari beberapa bahasa pemrograman untuk mendukung progres pengembangan web saya.</p>
-
-      <p> Selain keterampilan teknis, saya juga tertarik dengan public speaking, khususnya dalam hal presentasi. Selama ini, saya sudah beberapa kali melakukan presentasi di lingkungan akademik, dan saya ingin terus meningkatkan kemampuan saya dalam berbicara di depan umum. Saya berharap bisa mendapatkan lebih banyak pengalaman dengan berbicara di seminar atau komunitas teknologi, terutama dalam topik UI/UX dan web development.</p>
-        
-      <p>Saat ini, saya masih dalam tahap belajar dan ingin terus berkembang. Saya ingin bertemu dengan orang-orang yang memiliki minat serupa, belajar dari mereka, serta berbagi wawasan yang saya miliki. Saya percaya bahwa dengan terus berlatih dan mencoba hal baru, agar saya bisa menjadi lebih baik di bidang yang saya tekuni.</p>
-    </div>
-  </section>
-
-  <!-- Projects -->
-  <section id="projects">
-    <h2>Projects</h2>
-    <div class="project-list">
-      <div class="project">
-        <h3>Project 1</h3>
-        <p>Deskripsi singkat tentang project.</p>
-      </div>
-      <div class="project">
-        <h3>Project 2</h3>
-        <p>Deskripsi singkat tentang project.</p>
-      </div>
-    </div>
-  </section>
-
-  <!-- Skills -->
-  <section id="skills">
-    <h2>Skills</h2>
-    <div class="skill-list">
-      <div class="skill">HTML</div>
-      <div class="skill">CSS</div>
-      <div class="skill">JavaScript</div>
-      <div class="skill">Writing</div>
-      <div class="skill">Communication</div>
-    </div>
-  </section>
-    <!-- Contact -->
- 
-
-  
-
-  <!-- Footer -->
-  <footer>
-    <p>&copy; 2025 Sari Rizky Mei Putri</p>
-  </footer>
-
-  <!-- Background Audio -->
-  <audio id="background-audio" loop>
-    <source src="sound.mp3" type="audio/mp3" />
-    Browser Anda tidak mendukung elemen audio.
-  </audio>
-  <!-- Video Daun Jatuh -->
-<video id="leaf-video" autoplay muted loop playsinline style="display:none; position:fixed; top:0; left:0; width:100%; height:100%; object-fit:cover; z-index:-1;">
-    <source src="video daun.mp4" type="video/mp4" />
-    Browser Anda tidak mendukung video background.
-  </video>
-  
-
-  <script>
-    const audio = document.getElementById("background-audio");
-    const leafVideo = document.getElementById("leaf-video");
-  
-    function togglePlay() {
-      if (audio.paused) {
-        audio.play();
-        leafVideo.style.display = "block";
-      } else {
-        audio.pause();
-        leafVideo.style.display = "none";
+      50% {
+        background: linear-gradient(135deg, #a183f3, #e9d8fd, #9f7aea);
+        transform: rotate(180deg);
+      }
+      100% {
+        background: linear-gradient(225deg, #e9d8fd, #9f7aea, #a183f3);
+        transform: rotate(360deg);
       }
     }
-  
-    // Jika user pause dari browser, video tetap ikut mati
-    audio.addEventListener("pause", () => {
-      leafVideo.style.display = "none";
-    });
-  
-    audio.addEventListener("play", () => {
-      leafVideo.style.display = "block";
-    });
-  </script>
 
-<script>
-  // ... kode sebelumnya untuk audio dan video
+    .animate-rotate-gradient {
+      width: 200%;
+      height: 200%;
+      position: absolute;
+      top: -50%;
+      left: -50%;
+      background: linear-gradient(45deg, #9f7aea, #553c9a, #e9d8fd);
+      animation: rotate-gradient 10s linear infinite;
+      z-index: 0;
+    }
 
-  // Animasi muncul saat scroll
-  const aboutParagraphs = document.querySelectorAll('.about-content p');
+    body {
+      position: relative;
+      z-index: 1; /* Ensure body content is above the background */
+    }
 
-  function revealOnScroll() {
-    const triggerBottom = window.innerHeight * 0.9;
+    .boxes {
+      background: linear-gradient(to top, #e9d8fd 0%, #9f7aea 100%);
+      width: 100%;
+      height: 100vh;
+      position: fixed;
+      top: 0;
+      left: 0;
+      z-index: 5; /* Ensure it stays behind other content */
+    }
 
-    aboutParagraphs.forEach(p => {
-      const pTop = p.getBoundingClientRect().top;
+    .single-box {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      overflow: hidden;
+    }
 
-      if (pTop < triggerBottom) {
-        p.classList.add('show');
-      } else {
-        p.classList.remove('show');
+    .single-box li {
+      position: absolute;
+      display: block;
+      list-style: none;
+      width: 25px;
+      height: 25px;
+      background: rgba(255, 255, 255, 0.2);
+      animation: animate 20s linear infinite;
+      bottom: -150px;
+    }
+
+    .single-box li:nth-child(1) {
+      left: 86%;
+      width: 80px;
+      height: 80px;
+      animation-delay: 0s;
+    }
+
+    .single-box li:nth-child(2) {
+      left: 12%;
+      width: 30px;
+      height: 30px;
+      animation-delay: 1.5s;
+      animation-duration: 10s;
+    }
+
+    .single-box li:nth-child(3) {
+      left: 29%;
+      width: 100px;
+      height: 100px;
+      animation-delay: 5.5s;
+    }
+
+    .single-box li:nth-child(4) {
+      left: 42%;
+      width: 150px;
+      height: 150px;
+      animation-delay: 0s;
+      animation-duration: 15s;
+    }
+
+    .single-box li:nth-child(5) {
+      left: 65%;
+      width: 40px;
+      height: 40px;
+      animation-delay: 0s;
+    }
+
+    .single-box li:nth-child(6) {
+      left: 15%;
+      width: 110px;
+      height: 110px;
+      animation-delay: 3.5s;
+    }
+
+    .single-box li:nth-child(7) {
+      left: 75%;
+      width: 200px;
+      height: 200px;
+      animation-delay: 4.5s;
+      bottom: -250px;
+    }
+
+    @keyframes animate {
+      0% {
+        transform: translateY(0) rotate(0deg);
+        opacity: 1;
       }
-    });
-  }
+      100% {
+        transform: translateY(-800px) rotate(360deg);
+        opacity: 0;
+      }
+    }
+  </style>
+</head>
 
-  window.addEventListener('scroll', revealOnScroll);
-  window.addEventListener('load', revealOnScroll);
-</script>
+<body class="bg-pastel-purple">
+  <div class="boxes">
+    <div class="single-box">
+      <ul>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+      </ul>
+    </div>
+  </div>
+  <nav class="bg-purple-100 shadow-lg sticky top-0 z-50 transition-all duration-300">
+    <div class="max-w-6xl mx-auto px-4">
+      <div class="flex justify-between items-center">
+        <div>
+          <a href="#home" class="flex items-center py-4 px-2">
+            <span class="font-bold text-dark-purple text-2xl">Sari Rizky Mei Putri</span>
+          </a>
+        </div>
+        <div class="flex items-center space-x-1">
+          <div class="hidden md:flex items-center space-x-1">
+            <a href="#home" class="py-4 px-2 text-dark-purple font-semibold hover:text-accent-purple transition duration-300">Home</a>
+            <a href="#about" class="py-4 px-2 text-dark-purple font-semibold hover:text-accent-purple transition duration-300">About</a>
+            <a href="projects.html" class="py-4 px-2 text-dark-purple font-semibold hover:text-accent-purple transition duration-300">Projects</a>
+            <a href="#skills" class="py-4 px-2 text-dark-purple font-semibold hover:text-accent-purple transition duration-300">Skills</a>
+            <a href="#experience" class="py-4 px-2 text-dark-purple font-semibold hover:text-accent-purple transition duration-300">Experience</a>
+            <a href="#contact" class="py-4 px-2 text-dark-purple font-semibold hover:text-accent-purple transition duration-300">Contact</a>
+          </div>
+          <div class="md:hidden flex items-center">
+            <button class="outline-none mobile-menu-button p-2">
+              <svg class="w-6 h-6 text-dark-purple hover:text-accent-purple" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path d="M4 6h16M4 12h16M4 18h16"></path>
+              </svg>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="hidden mobile-menu md:hidden bg-purple-100">
+      <ul>
+        <li><a href="#home" class="block px-4 py-2 text-dark-purple hover:bg-accent-purple hover:text-white">Home</a></li>
+        <li><a href="#about" class="block px-4 py-2 text-dark-purple hover:bg-accent-purple hover:text-white">About</a></li>
+        <li><a href="projects.html" class="block px-4 py-2 text-dark-purple hover:bg-accent-purple hover:text-white">Projects</a></li>
+        <li><a href="#skills" class="block px-4 py-2 text-dark-purple hover:bg-accent-purple hover:text-white">Skills</a></li>
+        <li><a href="#experience" class="block px-4 py-2 text-dark-purple hover:bg-accent-purple hover:text-white">Experience</a></li>
+        <li><a href="#contact" class="block px-4 py-2 text-dark-purple hover:bg-accent-purple hover:text-white">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+  <main class="relative overflow-hidden">
+    <div class="absolute inset-0 z-0 animate-rotate-gradient"></div>
+    <div class="relative">
+      <section id="home" class="mt-24 max-w-6xl mx-auto relative">
+        <div class="container mx-auto px-4">
+          <div class="flex flex-col md:flex-row items-center">
+            <div class="md:w-1/2">
+              <h1 class="text-4xl md:text-5xl font-bold text-dark-purple leading-tight">
+                <span id="typing-animation"></span>
+              </h1>
+              <p class="text-dark-purple mt-6 text-lg">We provide innovative solutions for your business needs.</p>
+              <div class="mt-10">
+                <a href="#" class="bg-purple-400 text-white px-8 py-4 rounded-full font-semibold hover:bg-purple-800 transition duration-300">Selengkapnya 🚀</a>
+              </div>
+            </div>
+            <div class="md:w-1/2 mt-12 md:mt-0">
+              <img src="https://saririzkymeiputri.github.io/profile.jpg" alt="Hero Image" class="rounded-lg shadow-lg">
+            </div>
+          </div>
+        </div>
+      </section>  
+      <section id="about" class="mt-20 py-16 bg-soft-purple">
+        <div class="max-w-6xl mx-auto px-4">
+          <div class="text-center">
+            <h2 class="text-4xl font-bold text-center text-gray-800 mb-12 inline-block relative">About Me
+              <div class="absolute bottom-0 left-0 h-1 bg-yellow-500" style="width: 100%;"></div>
+            </h2>
+          </div>
+          <div class="flex flex-col md:flex-row items-center gap-12">
+            <div class="md:w-1/3">
+              <img src="https://saririzkymeiputri.github.io/profile.jpg" alt="Profile Picture" class="rounded-full shadow-xl w-64 h-64 object-cover mx-auto">
+            </div>
+            <div class="md:w-2/3">
+              <div class="bg-white p-8 rounded-xl shadow-lg">
+                <p class="text-dark-purple mb-4 leading-relaxed font-bold">Nama saya Sari, seorang mahasiswa di Universitas Riau, yang sedang belajar dan mengembangkan keterampilan di bidang teknologi. Saya memiliki minat dalam desain UI/UX, website dan AI. Selain itu, saya juga sedang mempelajari beberapa bahasa pemrograman untuk mendukung progres pengembangan web saya.</p>
+                <p class="text-dark-purple mb-4 leading-relaxed font-bold">Selain keterampilan teknis, saya juga tertarik dengan public speaking, khususnya dalam hal presentasi. Selama ini, saya sudah beberapa kali melakukan presentasi di lingkungan akademik, dan saya ingin terus meningkatkan kemampuan saya dalam berbicara di depan umum. Saya berharap bisa mendapatkan lebih banyak pengalaman dengan berbicara di seminar atau komunitas teknologi, terutama dalam topik UI/UX dan web development.</p>
+                <p class="text-dark-purple leading-relaxed font-bold">Saat ini, saya masih dalam tahap belajar dan ingin terus berkembang. Saya ingin bertemu dengan orang-orang yang memiliki minat serupa, belajar dari mereka, serta berbagi wawasan yang saya miliki. Saya percaya bahwa dengan terus berlatih dan mencoba hal baru, agar saya bisa menjadi lebih baik di bidang yang saya tekuni.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section id="skills" class="mt-20 py-16 bg-white">
+        <div class="max-w-6xl mx-auto px-4">
+          <div class="text-center">
+            <h2 class="text-4xl font-bold text-center text-gray-800 mb-12 inline-block relative">Skills
+              <div class="absolute bottom-0 left-0 h-1 bg-yellow-500" style="width: 100%;"></div>
+            </h2>
+          </div>
+          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div class="skill-card bg-pastel-purple p-6 rounded-lg shadow-md">
+              <div class="skill-icon bg-blue-100">
+                <svg class="w-8 h-8 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"></path>
+                </svg>
+              </div>
+              <h3 class="text-2xl font-bold text-dark-purple mb-4">HTML</h3>
+              <p class="text-dark-purple">Structuring web content with semantic markup.</p>
+            </div>
+            <div class="skill-card bg-pastel-purple p-6 rounded-lg shadow-md">
+              <div class="skill-icon bg-purple-100">
+                <svg class="w-8 h-8 text-purple-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 4l16 8-16 8V4z"></path>
+                </svg>
+              </div>
+              <h3 class="text-2xl font-bold text-dark-purple mb-4">CSS</h3>
+              <p class="text-dark-purple">Styling and designing beautiful user interfaces.</p>
+            </div>
+            <div class="skill-card bg-pastel-purple p-6 rounded-lg shadow-md">
+              <div class="skill-icon bg-yellow-100">
+                <svg class="w-8 h-8 text-yellow-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path>
+                </svg>
+              </div>
+              <h3 class="text-2xl font-bold text-dark-purple mb-4">JavaScript</h3>
+              <p class="text-dark-purple">Building interactive and dynamic web applications.</p>
+            </div>
+            <div class="skill-card bg-pastel-purple p-6 rounded-lg shadow-md">
+              <div class="skill-icon bg-green-100">
+                <svg class="w-8 h-8 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"></path>
+                </svg>
+              </div>
+              <h3 class="text-2xl font-bold text-dark-purple mb-4">Writing</h3>
+              <p class="text-dark-purple">Creating clear and engaging technical content.</p>
+            </div>
+            <div class="skill-card bg-pastel-purple p-6 rounded-lg shadow-md">
+              <div class="skill-icon bg-red-100">
+                <svg class="w-8 h-8 text-red-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z"></path>
+                </svg>
+              </div>
+              <h3 class="text-2xl font-bold text-dark-purple mb-4">Communication</h3>
+              <p class="text-dark-purple">Effectively collaborating and presenting ideas.</p>
+            </div>
+          </div>
+        </div>
+      </section>
 
-<li><a href="experience.html">Experience</a></li>
+      <section id="experience" class="mt-20 py-16 bg-pastel-purple">
+        <div class="max-w-6xl mx-auto px-4">
+          <div class="text-center">
+            <h2 class="text-4xl font-bold text-center text-dark-purple mb-12 inline-block relative">Certificates
+              <div class="absolute bottom-0 left-0 h-1 bg-accent-purple" style="width: 100%;"></div>
+            </h2>
+          </div>
 
-<nav>
-  <ul>
-    <li><a href="index.html">Home</a></li>
-    <li><a href="about.html">About</a></li>
-    <li><a href="project.html">Project</a></li>
-    <li><a href="experience.html">Experience</a></li> <!-- Tambahkan ini -->
-    <li><a href="contact.html">Contact</a></li>
-  </ul>
-</nav>
+          <!-- English Certificate -->
+          <div class="mb-12">
+            <div class="grid grid-cols-1 gap-6 md:grid-cols-2 md:gap-12 items-center">
+              <div class="bg-white p-4 rounded-xl shadow-lg md:order-2">
+                <img src="https://saririzkymeiputri.github.io/sertifenglish.png" alt="English Certificate" class="w-full h-auto object-cover rounded-lg">
+              </div>
+              <div class="bg-white p-8 rounded-xl shadow-lg md:order-1">
+                <h3 class="text-2xl font-bold text-dark-purple mb-4">Certificate of English Proficiency</h3>
+                <p class="text-dark-purple mb-2"><span class="font-semibold">Eva Education Centre</span></p>
+                <p class="text-dark-purple">Successfully completed an English course with distinction, demonstrating advanced proficiency in reading, writing, and speaking.</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Microsoft Office Certificate -->
+          <div>
+            <div class="grid grid-cols-1 gap-6 md:grid-cols-2 md:gap-12 items-center">
+              <div class="bg-white p-4 rounded-xl shadow-lg">
+                <img src="https://saririzkymeiputri.github.io/computer.jpg" alt="Microsoft Office Certificate" class="w-full h-auto object-cover rounded-lg">
+              </div>
+              <div class="bg-white p-8 rounded-xl shadow-lg">
+                <h3 class="text-2xl font-bold text-dark-purple mb-4">Certificate Microsoft Office</h3>
+                <p class="text-dark-purple mb-2"><span class="font-semibold">Indragiri Komputer</span></p>
+                <p class="text-dark-purple">Joined and completed hands-on Course focused on Microsoft Office.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="contact" class="mt-20 py-16 bg-pastel-purple">
+        <div class="max-w-6xl mx-auto px-4">
+          <div class="text-center">
+            <h2 class="text-4xl font-bold text-center text-dark-purple mb-12 inline-block relative">Contact Me
+              <div class="absolute bottom-0 left-0 h-1 bg-accent-purple" style="width: 100%;"></div>
+            </h2>
+          </div>
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
+            <div class="bg-white p-8 rounded-xl shadow-lg">
+              <h3 class="text-2xl font-bold text-dark-purple mb-6">Get in Touch</h3>
+              <form class="space-y-6">
+                <div>
+                  <label for="name" class="block text-dark-purple font-medium mb-2">Name</label>
+                  <input type="text" id="name" class="w-full px-4 py-2 border border-purple-200 rounded-lg focus:ring-2 focus:ring-accent-purple focus:border-transparent" placeholder="Your name">
+                </div>
+                <div>
+                  <label for="email" class="block text-dark-purple font-medium mb-2">Email</label>
+                  <input type="email" id="email" class="w-full px-4 py-2 border border-purple-200 rounded-lg focus:ring-2 focus:ring-accent-purple focus:border-transparent" placeholder="Your email">
+                </div>
+                <div>
+                  <label for="message" class="block text-dark-purple font-medium mb-2">Message</label>
+                  <textarea id="message" rows="5" class="w-full px-4 py-2 border border-purple-200 rounded-lg focus:ring-2 focus:ring-accent-purple focus:border-transparent" placeholder="Your message"></textarea>
+                </div>
+                <button type="submit" class="w-full bg-accent-purple text-white px-6 py-3 rounded-lg hover:bg-purple-700 transition-colors">Send Message</button>
+              </form>
+            </div>
+            <div class="bg-white p-8 rounded-xl shadow-lg">
+              <h3 class="text-2xl font-bold text-dark-purple mb-6">Contact Information</h3>
+              <div class="space-y-4">
+                <div class="flex items-center">
+                  <div class="w-8 h-8 bg-purple-100 rounded-full flex items-center justify-center mr-4">
+                    <svg class="w-4 h-4 text-accent-purple" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
+                    </svg>
+                  </div>
+                  <p class="text-dark-purple">sari.rizky@example.com</p>
+                </div>
+                <div class="flex items-center">
+                  <div class="w-8 h-8 bg-purple-100 rounded-full flex items-center justify-center mr-4">
+                    <svg class="w-4 h-4 text-accent-purple" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 18h.01M8 21h8a2 2 0 002-2V5a2 2 0 00-2-2H8a2 2 0 00-2 2v14a2 2 0 002 2z"></path>
+                    </svg>
+                  </div>
+                  <p class="text-dark-purple">+62 812 3456 7890</p>
+                </div>
+                <div class="flex items-center">
+                  <div class="w-8 h-8 bg-purple-100 rounded-full flex items-center justify-center mr-4">
+                    <svg class="w-4 h-4 text-accent-purple" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path>
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path>
+                    </svg>
+                  </div>
+                  <p class="text-dark-purple">Jakarta, Indonesia</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    <footer class="bg-dark-purple py-8">
+      <div class="max-w-6xl mx-auto px-4">
+        <div class="flex flex-col md:flex-row items-center justify-between">
+          <p class="text-purple-800 font-bold text-center md:text-left mb-4 md:mb-0">© 2025 Sari Rizky Mei Putri. All rights reserved.</p>
+          <div class="flex space-x-4">
+            <a href="#" class="text-purple-400 hover:text-accent-purple transition duration-300">
+              <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M24 4.557c-.883.392-1.832.656-2.828.775 1.017-.609 1.798-1.574 2.165-2.724-.951.564-2.005.974-3.127 1.195-.897-.957-2.178-1.555-3.594-1.555-3.179 0-5.515 2.966-4.797 6.045-4.091-.205-7.719-2.165-10.148-5.144-1.29 2.213-.669 5.108 1.523 6.574-.806-.026-1.566-.247-2.229-.616-.054 2.281 1.581 4.415 3.949 4.89-.693.188-1.452.232-2.224.084.626 1.956 2.444 3.379 4.6 3.419-2.07 1.623-4.678 2.348-7.29 2.04 2.179 1.397 4.768 2.212 7.548 2.212 9.142 0 14.307-7.721 13.995-14.646.962-.695 1.797-1.562 2.457-2.549z"/></svg>
+            </a>
+            <a href="#" class="text-purple-400 hover:text-accent-purple transition duration-300">
+              <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+            </a>
+            <a href="#" class="text-purple-400 hover:text-accent-purple transition duration-300">
+              <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M4.98 3.5c0 1.381-1.11 2.5-2.48 2.5s-2.48-1.119-2.48-2.5c0-1.38 1.11-2.5 2.48-2.5s2.48 1.12 2.48 2.5zm.02 4.5h-5v16h5v-16zm7.982 0h-4.968v16h4.969v-8.399c0-4.67 6.029-5.052 6.029 0v8.399h4.988v-10.131c0-7.88-8.922-7.593-11.018-3.714v-2.155z"/></svg>
+            </a>
+          </div>
+        </div>
+      </div>
+    </footer>
+    </div>
+  </main>
+
+  <div class="fixed bottom-4 left-4 z-50">
+    <button id="music-toggle" class="p-4 bg-accent-purple rounded-full shadow-lg hover:bg-purple-400 transition-colors">
+      <svg id="play-icon" class="w-6 h-6 text-dark-purple" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14.752 11.168l-3.197-2.132A1 1 0 0010 9.87v4.263a1 1 0 001.555.832l3.197-2.132a1 1 0 000-1.664z"/>
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/>
+      </svg>
+      <svg id="pause-icon" class="w-6 h-6 text-dark-purple hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 9v6m4-6v6m7-3a9 9 0 11-18 0 9 9 0 0118 0z"/>
+      </svg>
+    </button>
+  </div>
+
+  <audio id="background-music" loop>
+    <source src="your-music-file.mp3" type="audio/mpeg">
+    Your browser does not support the audio element.
+  </audio>
+
+  <script src="js/index.js"></script>
+</body>
+
+</html>
